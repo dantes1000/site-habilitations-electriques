@@ -1,0 +1,77 @@
+---
+// Header avec navigation
+---
+
+<header class="bg-blue-900 text-white shadow-lg">
+  <nav class="container mx-auto px-4 py-4">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <div class="text-2xl font-bold">
+          <a href="/" class="hover:text-blue-200 transition">
+            Opinelec Formation
+          </a>
+        </div>
+      </div>
+
+      <!-- Menu Desktop -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="/" class="hover:text-blue-200 transition font-medium">
+          Accueil
+        </a>
+        <a href="/formations" class="hover:text-blue-200 transition font-medium">
+          Formations
+        </a>
+        <a href="/contact" class="hover:text-blue-200 transition font-medium">
+          Contact
+        </a>
+        <a 
+          href="/contact#devis" 
+          class="bg-white text-blue-900 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition"
+        >
+          Demander un devis
+        </a>
+      </div>
+
+      <!-- Bouton Menu Mobile -->
+      <button 
+        id="mobile-menu-button"
+        class="md:hidden text-white focus:outline-none"
+        aria-label="Menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menu Mobile (caché par défaut) -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+      <a href="/" class="block py-2 hover:text-blue-200 transition">
+        Accueil
+      </a>
+      <a href="/formations" class="block py-2 hover:text-blue-200 transition">
+        Formations
+      </a>
+      <a href="/contact" class="block py-2 hover:text-blue-200 transition">
+        Contact
+      </a>
+      <a 
+        href="/contact#devis" 
+        class="block bg-white text-blue-900 px-4 py-2 rounded-lg font-semibold text-center hover:bg-blue-50 transition mt-2"
+      >
+        Demander un devis
+      </a>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Toggle menu mobile
+  const button = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+  
+  button?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

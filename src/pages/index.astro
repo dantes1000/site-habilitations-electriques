@@ -1,16 +1,397 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Opinelec Formation - Habilitations Électriques">
+  
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          Formations Habilitations Électriques
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-blue-100">
+          Formateur certifié | Interventions sur toute la région<br />
+          Auvergne-Rhône-Alpes • Occitanie
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="/contact" 
+            class="bg-white text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition shadow-lg"
+          >
+            Demander un devis
+          </a>
+          <a 
+            href="#formations" 
+            class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition"
+          >
+            Voir les formations
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formations Principales -->
+  <section id="formations" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Nos Formations Principales
+        </h2>
+        <p class="text-xl text-gray-600">
+          Formations les plus demandées - Adaptées à tous les profils
+        </p>
+      </div>
+
+      <!-- Grille de cartes formations -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        
+        <!-- Carte 1 : B0-H0V -->
+        <div class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-xl hover:border-blue-500 transition">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-2xl font-bold text-blue-900">B0-H0V</h3>
+            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+              Non-électricien
+            </span>
+          </div>
+          <p class="text-gray-700 mb-4">
+            Exécuter en sécurité des opérations d'ordre non électrique dans un environnement électrique.
+          </p>
+          <ul class="space-y-2 text-gray-600 mb-6">
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Durée : 1 à 2 jours
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Basse et Haute Tension
+            </li>
+          </ul>
+          <a href="/contact" class="block text-center bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition">
+            Demander un devis
+          </a>
+        </div>
+
+        <!-- Carte 2 : BS-BE -->
+        <div class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-xl hover:border-blue-500 transition">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-2xl font-bold text-blue-900">BS-BE Manœuvre</h3>
+            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+              Intervention
+            </span>
+          </div>
+          <p class="text-gray-700 mb-4">
+            Interventions élémentaires et manœuvres en basse tension pour personnel non-électricien.
+          </p>
+          <ul class="space-y-2 text-gray-600 mb-6">
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Durée : 2 jours
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Basse Tension
+            </li>
+          </ul>
+          <a href="/contact" class="block text-center bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition">
+            Demander un devis
+          </a>
+        </div>
+
+        <!-- Carte 3 : B1-B2-BR-BC -->
+        <div class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-xl hover:border-blue-500 transition">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-2xl font-bold text-blue-900">B1-B2-BR-BC</h3>
+            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">
+              Électricien
+            </span>
+          </div>
+          <p class="text-gray-700 mb-4">
+            Travaux et interventions électriques en basse tension pour personnel électricien qualifié.
+          </p>
+          <ul class="space-y-2 text-gray-600 mb-6">
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Durée : 3 jours
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Basse Tension
+            </li>
+          </ul>
+          <a href="/contact" class="block text-center bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition">
+            Demander un devis
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Toutes les formations -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Toutes nos Habilitations
+        </h2>
+        <p class="text-xl text-gray-600">
+          Catalogue complet des formations disponibles
+        </p>
+      </div>
+
+      <div class="max-w-5xl mx-auto">
+        
+        <!-- Catégorie : Personnel Non-Électricien -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold text-blue-900 mb-4 pb-2 border-b-2 border-blue-900">
+            Personnel Non-Électricien
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+              <h4 class="font-bold text-lg text-gray-900">B0-H0V</h4>
+              <p class="text-gray-600 text-sm">Travaux d'ordre non-électrique BT et HT</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+              <h4 class="font-bold text-lg text-gray-900">B0-H0V CC</h4>
+              <p class="text-gray-600 text-sm">Travaux d'ordre non-électrique en courant continu</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Catégorie : Interventions Basse Tension -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold text-blue-900 mb-4 pb-2 border-b-2 border-blue-900">
+            Interventions Basse Tension
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+              <h4 class="font-bold text-lg text-gray-900">BS</h4>
+              <p class="text-gray-600 text-sm">Intervention élémentaire</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+              <h4 class="font-bold text-lg text-gray-900">BE Manœuvre</h4>
+              <p class="text-gray-600 text-sm">Manœuvres en basse tension</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Catégorie : Électricien Basse Tension -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold text-blue-900 mb-4 pb-2 border-b-2 border-blue-900">
+            Électricien Basse Tension
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+              <h4 class="font-bold text-lg text-gray-900">B2V</h4>
+              <p class="text-gray-600 text-sm">Chargé de travaux au voisinage</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+              <h4 class="font-bold text-lg text-gray-900">BC</h4>
+              <p class="text-gray-600 text-sm">Chargé de consignation</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+              <h4 class="font-bold text-lg text-gray-900">BR</h4>
+              <p class="text-gray-600 text-sm">Chargé d'intervention générale</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+              <h4 class="font-bold text-lg text-gray-900">BP</h4>
+              <p class="text-gray-600 text-sm">Photovoltaïque</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Catégorie : Haute Tension -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold text-blue-900 mb-4 pb-2 border-b-2 border-blue-900">
+            Haute Tension
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+              <h4 class="font-bold text-lg text-gray-900">BF-HF Exécutant</h4>
+              <p class="text-gray-600 text-sm">Travaux haute tension - exécutant</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+              <h4 class="font-bold text-lg text-gray-900">BF-HF Chargé de chantier</h4>
+              <p class="text-gray-600 text-sm">Travaux haute tension - chef de chantier</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+              <h4 class="font-bold text-lg text-gray-900">BE-HE Mesure Vérification</h4>
+              <p class="text-gray-600 text-sm">Essais, mesures et vérifications</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+              <h4 class="font-bold text-lg text-gray-900">BE-HE Essai</h4>
+              <p class="text-gray-600 text-sm">Essais haute tension</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
+              <h4 class="font-bold text-lg text-gray-900">HE Manœuvre</h4>
+              <p class="text-gray-600 text-sm">Manœuvres haute tension</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Zones d'intervention -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Zones d'intervention
+        </h2>
+        <p class="text-xl text-gray-600">
+          Nous intervenons principalement dans ces régions
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Région 1 -->
+          <div class="bg-blue-50 p-8 rounded-xl">
+            <h3 class="text-2xl font-bold text-blue-900 mb-4">
+              Auvergne-Rhône-Alpes
+            </h3>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Ardèche (07)
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Drôme (26)
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Isère (38)
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Savoie (73) & Haute-Savoie (74)
+              </li>
+            </ul>
+          </div>
+
+          <!-- Région 2 -->
+          <div class="bg-blue-50 p-8 rounded-xl">
+            <h3 class="text-2xl font-bold text-blue-900 mb-4">
+              Occitanie
+            </h3>
+            <p class="text-gray-700 mb-4">
+              Interventions possibles sur l'ensemble de la région Occitanie.
+            </p>
+            <p class="text-gray-600 text-sm italic">
+              Autres régions : nous consulter pour étudier votre demande.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pourquoi nous choisir -->
+  <section class="py-16 bg-gradient-to-br from-blue-900 to-blue-800 text-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">
+          Pourquoi choisir Opinelec Formation ?
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        
+        <div class="text-center">
+          <div class="bg-white/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Formateur Certifié</h3>
+          <p class="text-blue-100">
+            5 ans d'expérience en formation électrique professionnelle
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-white/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Proximité</h3>
+          <p class="text-blue-100">
+            Interventions dans vos locaux ou centres partenaires proches
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-white/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Réactivité</h3>
+          <p class="text-blue-100">
+            Réponse rapide à vos demandes et adaptation à vos contraintes
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Call-to-Action -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-gray-900 mb-6">
+          Prêt à former vos équipes ?
+        </h2>
+        <p class="text-xl text-gray-600 mb-8">
+          Contactez-nous pour obtenir un devis personnalisé adapté à vos besoins
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="/contact" 
+            class="bg-blue-900 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-800 transition shadow-lg"
+          >
+            Demander un devis gratuit
+          </a>
+          <a 
+            href="tel:0635252465" 
+            class="border-2 border-blue-900 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-900 hover:text-white transition"
+          >
+            Appelez-nous : 06 35 25 24 65
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
