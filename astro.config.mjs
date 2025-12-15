@@ -2,13 +2,15 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 
-import tailwindcss from '@tailwindcss/vite';
-
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-
+  server: {
+    host: true
+  },
   vite: {
-    plugins: [tailwindcss()]
+    server: {
+      allowedHosts: ['sclerotomic-unwidowed-corey.ngrok-free.dev']
+    }
   }
 });

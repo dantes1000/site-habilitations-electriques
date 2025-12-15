@@ -1,0 +1,211 @@
+<!-- components/Testimonials.astro -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        💬 Ils nous font confiance
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Ce que disent les collectivités et entreprises que nous accompagnons
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      
+      <!-- Témoignage 1 -->
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="testimonial-header">
+          <img 
+            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&h=400&q=80" 
+            alt="Jean Dupont"
+            class="testimonial-avatar"
+          />
+          <div>
+            <h4 class="font-bold text-gray-900">Jean Dupont</h4>
+            <p class="text-sm text-gray-600">Responsable Maintenance</p>
+            <p class="text-sm text-blue-600">Mairie de Lyon</p>
+          </div>
+        </div>
+        <div class="testimonial-content">
+          <div class="stars">★★★★★</div>
+          <p class="text-gray-700">
+            "La formation B0-H0V a été parfaitement adaptée à nos agents techniques. 
+            Le formateur a su rendre accessible des concepts complexes. 
+            Nos équipes travaillent maintenant en toute sécurité."
+          </p>
+        </div>
+        <div class="testimonial-footer">
+          <span class="tag">Collectivité</span>
+          <span class="tag">25 agents formés</span>
+        </div>
+      </div>
+
+      <!-- Témoignage 2 -->
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-header">
+          <img 
+            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&h=400&q=80" 
+            alt="Marie Leroy"
+            class="testimonial-avatar"
+          />
+          <div>
+            <h4 class="font-bold text-gray-900">Marie Leroy</h4>
+            <p class="text-sm text-gray-600">Directrice QHSE</p>
+            <p class="text-sm text-blue-600">Groupe Industriel Protech</p>
+          </div>
+        </div>
+        <div class="testimonial-content">
+          <div class="stars">★★★★★</div>
+          <p class="text-gray-700">
+            "Opinelec a formé 120 de nos collaborateurs sur 3 sites. 
+            Leur expertise terrain et leur pédagogie ont fait la différence. 
+            Nous renouvelons chaque année notre partenariat."
+          </p>
+        </div>
+        <div class="testimonial-footer">
+          <span class="tag">Industrie</span>
+          <span class="tag">120 personnes</span>
+        </div>
+      </div>
+
+      <!-- Témoignage 3 -->
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-header">
+          <img 
+            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&h=400&q=80" 
+            alt="Thomas Martin"
+            class="testimonial-avatar"
+          />
+          <div>
+            <h4 class="font-bold text-gray-900">Thomas Martin</h4>
+            <p class="text-sm text-gray-600">Directeur d'Exploitation</p>
+            <p class="text-sm text-blue-600">SARL Énergie Plus</p>
+          </div>
+        </div>
+        <div class="testimonial-content">
+          <div class="stars">★★★★★</div>
+          <p class="text-gray-700">
+            "Formation B1-B2-BR-BC d'une grande qualité. 
+            Le formateur a adapté le contenu à nos spécificités HT/BT. 
+            Nos électriciens sont maintenant autonomes et sécurisés."
+          </p>
+        </div>
+        <div class="testimonial-footer">
+          <span class="tag">PME</span>
+          <span class="tag">15 techniciens</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Logos partenaires -->
+    <div class="mt-20 pt-12 border-t border-gray-200">
+      <div class="text-center mb-8">
+        <p class="text-gray-600">Ils nous font confiance :</p>
+      </div>
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-60">
+        <div class="partner-logo">🏛️ COLLECTIVITÉS</div>
+        <div class="partner-logo">🏭 INDUSTRIE</div>
+        <div class="partner-logo">🏗️ BTP</div>
+        <div class="partner-logo">⚡ ÉNERGIE</div>
+        <div class="partner-logo">🏥 SANTÉ</div>
+      </div>
+    </div>
+
+    <style>
+      .testimonial-card {
+        background: white;
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .testimonial-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #667eea, #764ba2);
+      }
+      
+      .testimonial-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        border-color: #667eea;
+      }
+      
+      .testimonial-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .testimonial-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #e5e7eb;
+      }
+      
+      .stars {
+        color: #fbbf24;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        letter-spacing: 2px;
+      }
+      
+      .testimonial-content p {
+        font-style: italic;
+        line-height: 1.6;
+      }
+      
+      .testimonial-footer {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e5e7eb;
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+      
+      .tag {
+        background: #f3f4f6;
+        color: #4b5563;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+      
+      .partner-logo {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #374151;
+        padding: 0.5rem 1rem;
+        border: 2px dashed #d1d5db;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+      }
+      
+      .partner-logo:hover {
+        border-color: #667eea;
+        color: #667eea;
+        transform: scale(1.05);
+      }
+      
+      @media (max-width: 768px) {
+        .partner-logo {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </div>
+</section>

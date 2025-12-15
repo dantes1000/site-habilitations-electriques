@@ -1,0 +1,182 @@
+/* styles/effects.css */
+/* Effets électriques */
+.electric-border {
+  position: relative;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.electric-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(45deg, 
+    #667eea, 
+    #764ba2, 
+    #f59e0b, 
+    #10b981, 
+    #667eea);
+  background-size: 400% 400%;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: electricBorder 3s linear infinite;
+  filter: blur(0.5px);
+}
+
+@keyframes electricBorder {
+  0% {
+    background-position: 0% 50%;
+    filter: blur(0.5px) hue-rotate(0deg);
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: blur(1px) hue-rotate(180deg);
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: blur(0.5px) hue-rotate(360deg);
+  }
+}
+
+/* Animation de chargement */
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 4px solid #e5e7eb;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  position: relative;
+}
+
+.loader::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top: 4px solid #764ba2;
+  animation: spin 2s linear infinite;
+  filter: blur(1px);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Micro-interactions */
+.btn-magnetic {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.btn-magnetic::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-magnetic:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-magnetic:hover {
+  transform: scale(1.05);
+}
+
+/* Effet de glow électrique */
+.electric-glow {
+  box-shadow: 
+    0 0 20px rgba(102, 126, 234, 0.5),
+    0 0 40px rgba(118, 75, 162, 0.3),
+    0 0 60px rgba(245, 158, 11, 0.1);
+  animation: pulseGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+  from {
+    box-shadow: 
+      0 0 20px rgba(102, 126, 234, 0.5),
+      0 0 40px rgba(118, 75, 162, 0.3);
+  }
+  to {
+    box-shadow: 
+      0 0 30px rgba(102, 126, 234, 0.7),
+      0 0 50px rgba(118, 75, 162, 0.5),
+      0 0 70px rgba(245, 158, 11, 0.2);
+  }
+}
+
+/* Animation de connexion électrique */
+.electric-connection {
+  position: relative;
+}
+
+.electric-connection::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    #667eea, 
+    #764ba2, 
+    transparent);
+  animation: electricFlowHorizontal 2s linear infinite;
+}
+
+@keyframes electricFlowHorizontal {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Cartes 3D au survol */
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-3d:hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+}
+
+.card-3d .card-content {
+  transform: translateZ(50px);
+}
+
+/* Background électrique animé */
+.electric-bg {
+  background: 
+    linear-gradient(45deg, #0f172a 25%, transparent 25%),
+    linear-gradient(-45deg, #0f172a 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #0f172a 75%),
+    linear-gradient(-45deg, transparent 75%, #0f172a 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  animation: electricGrid 20s linear infinite;
+}
+
+@keyframes electricGrid {
+  0% { background-position: 0 0, 0 10px, 10px -10px, -10px 0px; }
+  100% { background-position: 40px 0, 40px 10px, 50px -10px, 30px 0px; }
+}

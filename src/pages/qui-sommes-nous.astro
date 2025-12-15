@@ -1,0 +1,350 @@
+---
+import Layout from '../components/layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Qui sommes-nous - Opinelec Formation" 
+  description="Camille OPINEL, formateur indépendant expert en habilitations électriques. 5 ans d'expérience, certifié Qualiopi, référencé DRIEETS et marchés publics."
+>
+  <!-- Ajouter la même structure flexbox -->
+  <div class="min-h-screen flex flex-col">
+    <Header />
+    
+    <div class="flex-grow">
+      <!-- Hero Section -->
+      <section class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-16">
+        <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+              Qui sommes-nous ?
+            </h1>
+            <p class="text-xl text-blue-100">
+              Formateur indépendant expert en habilitations électriques
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Présentation -->
+      <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto">
+            
+            <!-- Intro -->
+            <div class="mb-12">
+              <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                Avec <strong class="text-blue-900">5 années d'expérience</strong> dans la formation professionnelle, 
+                <strong class="text-blue-900">Opinelec Formation</strong> accompagne les entreprises et leurs collaborateurs 
+                dans la maîtrise des risques électriques.
+              </p>
+              <p class="text-lg text-gray-700 leading-relaxed">
+                Fort d'un parcours en tant qu'<strong>électricien BTP spécialisé dans le haut standing</strong>, 
+                je mets mon expertise terrain au service de formations concrètes et immédiatement applicables 
+                dans les secteurs de l'<strong>industrie et du BTP</strong>.
+              </p>
+            </div>
+
+            <!-- Notre expertise -->
+            <div class="mb-12">
+              <h2 class="text-3xl font-bold text-blue-900 mb-6 pb-3 border-b-2 border-blue-200">
+                Notre Expertise
+              </h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="flex items-start gap-4">
+                  <div class="bg-blue-100 p-3 rounded-lg flex-shrink-0">
+                    <svg class="w-6 h-6 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-gray-900 mb-2">Habilitations Électriques</h3>
+                    <p class="text-gray-600">Tous niveaux : B0 à Haute Tension (BF-HF, BE-HE)</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div class="bg-blue-100 p-3 rounded-lg flex-shrink-0">
+                    <svg class="w-6 h-6 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-gray-900 mb-2">Intra-Entreprise</h3>
+                    <p class="text-gray-600">Interventions dans vos locaux partout en France</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div class="bg-blue-100 p-3 rounded-lg flex-shrink-0">
+                    <svg class="w-6 h-6 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-gray-900 mb-2">Marchés Publics</h3>
+                    <p class="text-gray-600">Référencé DRIEETS, DataDock et marchés publics</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div class="bg-blue-100 p-3 rounded-lg flex-shrink-0">
+                    <svg class="w-6 h-6 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-gray-900 mb-2">Certification Qualiopi</h3>
+                    <p class="text-gray-600">Qualité garantie et prise en charge OPCO possible</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Notre approche -->
+            <div class="mb-12">
+              <h2 class="text-3xl font-bold text-blue-900 mb-6 pb-3 border-b-2 border-blue-200">
+                Notre Approche Pédagogique
+              </h2>
+              
+              <div class="bg-blue-50 rounded-lg p-8 mb-6">
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                  <strong class="text-blue-900">Formateur de terrain</strong>, j'adapte chaque session aux réalités 
+                  de votre secteur d'activité. Mes formations ne sont pas des cours théoriques standardisés : 
+                  elles s'appuient sur des <strong>retours d'expérience réels</strong> et des 
+                  <strong>mises en situation pratiques</strong>.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                  Mes modules de formation font l'objet d'<strong class="text-blue-900">audits qualité annuels</strong> 
+                  et bénéficient d'une <strong>veille active permanente</strong> sur les évolutions 
+                  réglementaires et normatives en vigueur.
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="text-center p-6 bg-white rounded-lg border-2 border-blue-200">
+                  <div class="text-3xl font-bold text-blue-900 mb-2">100%</div>
+                  <p class="text-gray-600">Pratique & Terrain</p>
+                </div>
+
+                <div class="text-center p-6 bg-white rounded-lg border-2 border-blue-200">
+                  <div class="text-3xl font-bold text-blue-900 mb-2">5 ans</div>
+                  <p class="text-gray-600">D'expérience formation</p>
+                </div>
+
+                <div class="text-center p-6 bg-white rounded-lg border-2 border-blue-200">
+                  <div class="text-3xl font-bold text-blue-900 mb-2">2 régions</div>
+                  <p class="text-gray-600">Zones privilégiées</p>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Zones d'intervention -->
+            <div class="mb-12">
+              <h2 class="text-3xl font-bold text-blue-900 mb-6 pb-3 border-b-2 border-blue-200">
+                Zones d'Intervention
+              </h2>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                
+                <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-800">
+                  <div class="flex items-center gap-3 mb-2">
+                    <svg class="w-6 h-6 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <h3 class="text-xl font-bold text-gray-900">Auvergne-Rhône-Alpes</h3>
+                  </div>
+                  <p class="text-gray-600">Interventions régulières dans toute la région</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-800">
+                  <div class="flex items-center gap-3 mb-2">
+                    <svg class="w-6 h-6 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <h3 class="text-xl font-bold text-gray-900">Occitanie</h3>
+                  </div>
+                  <p class="text-gray-600">Disponible pour vos formations sur demande</p>
+                </div>
+
+              </div>
+
+              <p class="text-center text-gray-600">
+                <strong>Autres régions :</strong> <a href="/contact" class="text-blue-800 font-semibold hover:underline">nous consulter</a>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Autres formations disponibles -->
+      <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto">
+            
+            <div class="text-center mb-12">
+              <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                Autres Formations Disponibles
+              </h2>
+              <p class="text-xl text-gray-600">
+                Un réseau de formateurs certifiés à votre service
+              </p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+              <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                Grâce à notre <strong class="text-blue-900">réseau étendu de partenaires formateurs qualifiés</strong>, 
+                nous coordonnons pour vous un large éventail de formations complémentaires. 
+                Notre force : une <strong>grande souplesse d'organisation</strong> et la capacité de 
+                <strong>répondre aux demandes urgentes</strong>.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
+              <!-- CACES -->
+              <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="bg-orange-100 p-3 rounded-lg">
+                    <svg class="w-6 h-6 text-orange-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h3m-3 4h3m-6-4h.01M9 16h.01" />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">CACES</h3>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">Certificat d'Aptitude à la Conduite En Sécurité</p>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start gap-2">
+                    <span class="text-blue-800 mt-1">•</span>
+                    <span>R482 - Engins de chantier</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-blue-800 mt-1">•</span>
+                    <span>R489 - Chariots automoteurs</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-blue-800 mt-1">•</span>
+                    <span>R486 - PEMP (Nacelles)</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-blue-800 mt-1">•</span>
+                    <span>Autres catégories sur demande</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- AIPR -->
+              <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="bg-green-100 p-3 rounded-lg">
+                    <svg class="w-6 h-6 text-green-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">AIPR</h3>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">Autorisation d'Intervention à Proximité des Réseaux</p>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start gap-2">
+                    <span class="text-blue-800 mt-1">•</span>
+                    <span>Niveau Opérateur</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-blue-800 mt-1">•</span>
+                    <span>Niveau Encadrant</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-blue-800 mt-1">•</span>
+                    <span>Niveau Concepteur</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Échafaudages -->
+              <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="bg-blue-100 p-3 rounded-lg">
+                    <svg class="w-6 h-6 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">Échafaudages</h3>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">Montage et utilisation en sécurité</p>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start gap-2">
+                    <span class="text-blue-800 mt-1">•</span>
+                    <span>Montage/démontage/vérification</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-blue-800 mt-1">•</span>
+                    <span>Échafaudages fixes</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-blue-800 mt-1">•</span>
+                    <span>Échafaudages roulants</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- SST -->
+              <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="bg-red-100 p-3 rounded-lg">
+                    <svg class="w-6 h-6 text-red-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-900">SST</h3>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">Sauveteur Secouriste du Travail</p>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start gap-2">
+                    <span class="text-blue-800 mt-1">•</span>
+                    <span>Formation initiale (2 jours)</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-blue-800 mt-1">•</span>
+                    <span>Recyclage MAC SST (1 jour)</span>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- CTA Formations annexes -->
+            <div class="mt-12 bg-gradient-to-r from-blue-900 to-blue-800 rounded-lg shadow-xl p-8 text-center text-white">
+              <div class="mb-4">
+                <svg class="w-12 h-12 mx-auto text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-3">Besoin d'une formation spécifique ?</h3>
+              <p class="text-lg mb-6 text-blue-100">
+                Contactez-nous ! Nous coordonnons pour vous les meilleurs formateurs de notre réseau.<br />
+                <strong>Réactivité garantie</strong>, même pour les demandes urgentes.
+              </p>
+              <a 
+                href="/contact" 
+                class="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition shadow-lg"
+              >
+                Demander un devis
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div> <!-- Fin de div.flex-grow -->
+
+    <Footer />
+  </div> <!-- Fin de div.min-h-screen flex flex-col -->
+</Layout>

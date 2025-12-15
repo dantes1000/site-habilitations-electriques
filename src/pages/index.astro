@@ -1,397 +1,935 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../components/layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import QuizHabilitation from '../components/QuizHabilitation.astro';
+import Testimonials from '../components/Testimonials.astro';
 ---
 
-<Layout title="Opinelec Formation - Habilitations Électriques">
-  
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-20">
+<Layout 
+  title="Opinelec Formation - Habilitations Électriques Certifiées Qualiopi" 
+  description="Formation aux habilitations électriques en Auvergne-Rhône-Alpes et Occitanie. Certifié Qualiopi, référencé DRIEETS et marchés publics. B0-H0V, BS-BE, B1-B2-BR-BC, Haute Tension."
+>
+  <Header />
+
+  <!-- Hero Section Professionnel -->
+  <section class="section-navy text-white py-20 md:py-32">
     <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-5xl md:text-6xl font-bold mb-6">
-          Formations Habilitations Électriques
-        </h1>
-        <p class="text-xl md:text-2xl mb-8 text-blue-100">
-          Formateur certifié | Interventions sur toute la région<br />
-          Auvergne-Rhône-Alpes • Occitanie
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a 
-            href="/contact" 
-            class="bg-white text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition shadow-lg"
-          >
-            Demander un devis
-          </a>
-          <a 
-            href="#formations" 
-            class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition"
-          >
-            Voir les formations
-          </a>
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          
+          <!-- Contenu -->
+          <div data-aos="fade-right">
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+              <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-sm font-semibold">Certifié Qualiopi • Référencé DRIEETS</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              Formations aux<br />
+              Habilitations Électriques
+            </h1>
+            
+            <p class="text-xl text-blue-100 mb-8 leading-relaxed">
+              Organisme de formation indépendant spécialisé dans la sécurité électrique. 
+              Interventions en entreprise, conformité NF C18-510.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 mb-12">
+              <a href="/contact" class="btn-primary">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Devis gratuit
+              </a>
+              <a href="/formations" class="btn-outline">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                Nos formations
+              </a>
+            </div>
+
+            <!-- Stats rapides -->
+            <div class="grid grid-cols-3 gap-6">
+              <div>
+                <div class="text-3xl font-bold text-white mb-1">5+</div>
+                <div class="text-sm text-blue-200">Années d'expérience</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-white mb-1">14</div>
+                <div class="text-sm text-blue-200">Formations certifiées</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-white mb-1">2</div>
+                <div class="text-sm text-blue-200">Régions couvertes</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications en évidence -->
+          <div data-aos="fade-left" class="hidden lg:block">
+            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+              <h3 class="text-2xl font-bold mb-6 text-center">Organisme Certifié</h3>
+              
+              <div class="space-y-4">
+                <div class="certification-badge">
+                  <div class="flex items-center gap-4">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div class="flex-1">
+                      <div class="font-bold text-gray-900 text-lg">Qualiopi</div>
+                      <div class="text-sm text-gray-600">Certification qualité</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="certification-badge">
+                  <div class="flex items-center gap-4">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                      </svg>
+                    </div>
+                    <div class="flex-1">
+                      <div class="font-bold text-gray-900 text-lg">DRIEETS</div>
+                      <div class="text-sm text-gray-600">Référencé organisme</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="certification-badge">
+                  <div class="flex items-center gap-4">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                      </svg>
+                    </div>
+                    <div class="flex-1">
+                      <div class="font-bold text-gray-900 text-lg">Marchés publics</div>
+                      <div class="text-sm text-gray-600">Référencé DataDock</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-6 border-t border-white/20 text-center">
+                <div class="text-sm text-blue-100">
+                  ✓ Prise en charge OPCO possible<br />
+                  ✓ Conformité NF C18-510
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Formations Principales -->
-  <section id="formations" class="py-16 bg-white">
+  <!-- Formations principales par catégorie -->
+  <section class="py-20 bg-white">
     <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+      
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
           Nos Formations Principales
         </h2>
-        <p class="text-xl text-gray-600">
-          Formations les plus demandées - Adaptées à tous les profils
+        <div class="divider-line max-w-md mx-auto mb-6"></div>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Formations conformes à la norme NF C18-510, adaptées à tous les niveaux d'habilitation
         </p>
       </div>
 
-      <!-- Grille de cartes formations -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
         
-        <!-- Carte 1 : B0-H0V -->
-        <div class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-xl hover:border-blue-500 transition">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-2xl font-bold text-blue-900">B0-H0V</h3>
-            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
-              Non-électricien
-            </span>
+        <!-- Personnel Non-Électricien -->
+        <div class="card-pro p-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="icon-electric mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.040A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
           </div>
-          <p class="text-gray-700 mb-4">
-            Exécuter en sécurité des opérations d'ordre non électrique dans un environnement électrique.
+          <span class="badge-info mb-4">B0-H0V</span>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Personnel<br />Non-Électricien
+          </h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Travaux d'ordre non-électrique en BT et HT
           </p>
-          <ul class="space-y-2 text-gray-600 mb-6">
-            <li class="flex items-center gap-2">
-              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              Durée : 1 à 2 jours
-            </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              Basse et Haute Tension
-            </li>
-          </ul>
-          <a href="/contact" class="block text-center bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition">
-            Demander un devis
+          <div class="text-sm text-gray-500 mb-4">
+            📅 1-2 jours
+          </div>
+          <a href="/formations#b0-h0v" class="text-blue-800 font-semibold text-sm hover:underline">
+            Voir le détail →
           </a>
         </div>
 
-        <!-- Carte 2 : BS-BE -->
-        <div class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-xl hover:border-blue-500 transition">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-2xl font-bold text-blue-900">BS-BE Manœuvre</h3>
-            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
-              Intervention
-            </span>
+        <!-- Interventions BT -->
+        <div class="card-pro p-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon-electric mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
           </div>
-          <p class="text-gray-700 mb-4">
-            Interventions élémentaires et manœuvres en basse tension pour personnel non-électricien.
+          <span class="badge-bt mb-4">BS - BE</span>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Interventions<br />Basse Tension
+          </h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Interventions élémentaires et manœuvres
           </p>
-          <ul class="space-y-2 text-gray-600 mb-6">
-            <li class="flex items-center gap-2">
-              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              Durée : 2 jours
-            </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              Basse Tension
-            </li>
-          </ul>
-          <a href="/contact" class="block text-center bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition">
-            Demander un devis
+          <div class="text-sm text-gray-500 mb-4">
+            📅 2-3 jours
+          </div>
+          <a href="/formations#bs" class="text-orange-600 font-semibold text-sm hover:underline">
+            Voir le détail →
           </a>
         </div>
 
-        <!-- Carte 3 : B1-B2-BR-BC -->
-        <div class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-xl hover:border-blue-500 transition">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-2xl font-bold text-blue-900">B1-B2-BR-BC</h3>
-            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">
-              Électricien
-            </span>
+        <!-- Électricien BT -->
+        <div class="card-pro p-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon-electric mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
           </div>
-          <p class="text-gray-700 mb-4">
-            Travaux et interventions électriques en basse tension pour personnel électricien qualifié.
+          <span class="badge-bt mb-4">B1-B2-BR-BC</span>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Électricien<br />Basse Tension
+          </h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Travaux, dépannage et consignation
           </p>
-          <ul class="space-y-2 text-gray-600 mb-6">
-            <li class="flex items-center gap-2">
-              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              Durée : 3 jours
-            </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              Basse Tension
-            </li>
-          </ul>
-          <a href="/contact" class="block text-center bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition">
-            Demander un devis
+          <div class="text-sm text-gray-500 mb-4">
+            📅 3 jours
+          </div>
+          <a href="/formations#b1-b2-br-bc" class="text-orange-600 font-semibold text-sm hover:underline">
+            Voir le détail →
+          </a>
+        </div>
+
+        <!-- Haute Tension -->
+        <div class="card-pro p-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="icon-electric mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
+          <span class="badge-ht mb-4">BF-HF - HE</span>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Haute Tension<br />HTA
+          </h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Travaux sous tension et manœuvres HT
+          </p>
+          <div class="text-sm text-gray-500 mb-4">
+            📅 2-3 jours
+          </div>
+          <a href="/formations#bf-hf" class="text-yellow-700 font-semibold text-sm hover:underline">
+            Voir le détail →
           </a>
         </div>
 
       </div>
+
     </div>
   </section>
 
-  <!-- Toutes les formations -->
-  <section class="py-16 bg-gray-50">
+  <!-- Catalogue complet détaillé -->
+  <section class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+      
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
           Toutes nos Habilitations
         </h2>
-        <p class="text-xl text-gray-600">
+        <div class="divider-line max-w-md mx-auto mb-6"></div>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
           Catalogue complet des formations disponibles
         </p>
       </div>
 
-      <div class="max-w-5xl mx-auto">
+      <!-- Personnel Non-Électricien -->
+      <div class="mb-16" data-aos="fade-up">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.040A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="text-3xl font-bold text-gray-900">Personnel Non-Électricien</h3>
+        </div>
         
-        <!-- Catégorie : Personnel Non-Électricien -->
-        <div class="mb-8">
-          <h3 class="text-2xl font-bold text-blue-900 mb-4 pb-2 border-b-2 border-blue-900">
-            Personnel Non-Électricien
-          </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
-              <h4 class="font-bold text-lg text-gray-900">B0-H0V</h4>
-              <p class="text-gray-600 text-sm">Travaux d'ordre non-électrique BT et HT</p>
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
-              <h4 class="font-bold text-lg text-gray-900">B0-H0V CC</h4>
-              <p class="text-gray-600 text-sm">Travaux d'ordre non-électrique en courant continu</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Catégorie : Interventions Basse Tension -->
-        <div class="mb-8">
-          <h3 class="text-2xl font-bold text-blue-900 mb-4 pb-2 border-b-2 border-blue-900">
-            Interventions Basse Tension
-          </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
-              <h4 class="font-bold text-lg text-gray-900">BS</h4>
-              <p class="text-gray-600 text-sm">Intervention élémentaire</p>
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
-              <h4 class="font-bold text-lg text-gray-900">BE Manœuvre</h4>
-              <p class="text-gray-600 text-sm">Manœuvres en basse tension</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Catégorie : Électricien Basse Tension -->
-        <div class="mb-8">
-          <h3 class="text-2xl font-bold text-blue-900 mb-4 pb-2 border-b-2 border-blue-900">
-            Électricien Basse Tension
-          </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
-              <h4 class="font-bold text-lg text-gray-900">B2V</h4>
-              <p class="text-gray-600 text-sm">Chargé de travaux au voisinage</p>
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
-              <h4 class="font-bold text-lg text-gray-900">BC</h4>
-              <p class="text-gray-600 text-sm">Chargé de consignation</p>
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
-              <h4 class="font-bold text-lg text-gray-900">BR</h4>
-              <p class="text-gray-600 text-sm">Chargé d'intervention générale</p>
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
-              <h4 class="font-bold text-lg text-gray-900">BP</h4>
-              <p class="text-gray-600 text-sm">Photovoltaïque</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Catégorie : Haute Tension -->
-        <div class="mb-8">
-          <h3 class="text-2xl font-bold text-blue-900 mb-4 pb-2 border-b-2 border-blue-900">
-            Haute Tension
-          </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
-              <h4 class="font-bold text-lg text-gray-900">BF-HF Exécutant</h4>
-              <p class="text-gray-600 text-sm">Travaux haute tension - exécutant</p>
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
-              <h4 class="font-bold text-lg text-gray-900">BF-HF Chargé de chantier</h4>
-              <p class="text-gray-600 text-sm">Travaux haute tension - chef de chantier</p>
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
-              <h4 class="font-bold text-lg text-gray-900">BE-HE Mesure Vérification</h4>
-              <p class="text-gray-600 text-sm">Essais, mesures et vérifications</p>
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
-              <h4 class="font-bold text-lg text-gray-900">BE-HE Essai</h4>
-              <p class="text-gray-600 text-sm">Essais haute tension</p>
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
-              <h4 class="font-bold text-lg text-gray-900">HE Manœuvre</h4>
-              <p class="text-gray-600 text-sm">Manœuvres haute tension</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Zones d'intervention -->
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold text-gray-900 mb-4">
-          Zones d'intervention
-        </h2>
-        <p class="text-xl text-gray-600">
-          Nous intervenons principalement dans ces régions
-        </p>
-      </div>
-
-      <div class="max-w-4xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           
-          <!-- Région 1 -->
-          <div class="bg-blue-50 p-8 rounded-xl">
-            <h3 class="text-2xl font-bold text-blue-900 mb-4">
-              Auvergne-Rhône-Alpes
-            </h3>
-            <ul class="space-y-2 text-gray-700">
-              <li class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                Ardèche (07)
-              </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                Drôme (26)
-              </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                Isère (38)
-              </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                Savoie (73) & Haute-Savoie (74)
-              </li>
-            </ul>
+          <!-- B0-H0V -->
+          <div class="card-pro p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-xl font-bold text-gray-900">B0-H0V</h4>
+              <span class="badge-info">1-2 jours</span>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Travaux d'ordre non-électrique BT et HT
+            </p>
+            <a 
+              href="/formations#b0-h0v" 
+              class="text-blue-800 font-semibold text-sm hover:underline inline-flex items-center gap-1"
+            >
+              Voir le détail
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
           </div>
 
-          <!-- Région 2 -->
-          <div class="bg-blue-50 p-8 rounded-xl">
-            <h3 class="text-2xl font-bold text-blue-900 mb-4">
-              Occitanie
-            </h3>
-            <p class="text-gray-700 mb-4">
-              Interventions possibles sur l'ensemble de la région Occitanie.
+          <!-- B0-H0V CC -->
+          <div class="card-pro p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-xl font-bold text-gray-900">B0-H0V CC</h4>
+              <span class="badge-info">1-2 jours</span>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Travaux d'ordre non-électrique en courant continu
             </p>
-            <p class="text-gray-600 text-sm italic">
-              Autres régions : nous consulter pour étudier votre demande.
-            </p>
+            <a 
+              href="/formations#b0-h0v-cc" 
+              class="text-blue-800 font-semibold text-sm hover:underline inline-flex items-center gap-1"
+            >
+              Voir le détail
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
           </div>
 
         </div>
       </div>
+
+      <!-- Interventions Basse Tension -->
+      <div class="mb-16" data-aos="fade-up">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-700 rounded-xl flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-3xl font-bold text-gray-900">Interventions Basse Tension</h3>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- BS -->
+          <div class="card-pro p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-xl font-bold text-gray-900">BS</h4>
+              <span class="badge-bt">2 jours</span>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Intervention élémentaire
+            </p>
+            <a 
+              href="/formations#bs" 
+              class="text-orange-600 font-semibold text-sm hover:underline inline-flex items-center gap-1"
+            >
+              Voir le détail
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- BE Manœuvre -->
+          <div class="card-pro p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-xl font-bold text-gray-900">BE Manœuvre</h4>
+              <span class="badge-bt">1,5 jours</span>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Manœuvres en basse tension
+            </p>
+            <a 
+              href="/formations#be-manœuvre" 
+              class="text-orange-600 font-semibold text-sm hover:underline inline-flex items-center gap-1"
+            >
+              Voir le détail
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Électricien Basse Tension -->
+      <div class="mb-16" data-aos="fade-up">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="text-3xl font-bold text-gray-900">Électricien Basse Tension</h3>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- B1-B2-BR-BC -->
+          <div class="card-pro p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-xl font-bold text-gray-900">B1-B2-BR-BC</h4>
+              <span class="badge-bt">3 jours</span>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Travaux, intervention et consignation
+            </p>
+            <a 
+              href="/formations#b1-b2-br-bc" 
+              class="text-orange-600 font-semibold text-sm hover:underline inline-flex items-center gap-1"
+            >
+              Voir le détail
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- B2V -->
+          <div class="card-pro p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-xl font-bold text-gray-900">B2V</h4>
+              <span class="badge-bt">2 jours</span>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Chargé de travaux au voisinage
+            </p>
+            <a 
+              href="/formations#b2v" 
+              class="text-orange-600 font-semibold text-sm hover:underline inline-flex items-center gap-1"
+            >
+              Voir le détail
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- BC -->
+          <div class="card-pro p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-xl font-bold text-gray-900">BC</h4>
+              <span class="badge-bt">2 jours</span>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Chargé de consignation
+            </p>
+            <a 
+              href="/formations#bc" 
+              class="text-orange-600 font-semibold text-sm hover:underline inline-flex items-center gap-1"
+            >
+              Voir le détail
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- BR -->
+          <div class="card-pro p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-xl font-bold text-gray-900">BR</h4>
+              <span class="badge-bt">2-3 jours</span>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Chargé d'intervention générale
+            </p>
+            <a 
+              href="/formations#br" 
+              class="text-orange-600 font-semibold text-sm hover:underline inline-flex items-center gap-1"
+            >
+              Voir le détail
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- BP -->
+          <div class="card-pro p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-xl font-bold text-gray-900">BP Photovoltaïque</h4>
+              <span class="badge-bt">2 jours</span>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Opérations photovoltaïques
+            </p>
+            <a 
+              href="/formations#bp" 
+              class="text-orange-600 font-semibold text-sm hover:underline inline-flex items-center gap-1"
+            >
+              Voir le détail
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Haute Tension -->
+      <div class="mb-8" data-aos="fade-up">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center">
+            <svg class="w-6 h-6 text-yellow-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
+          <h3 class="text-3xl font-bold text-gray-900">Haute Tension</h3>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- BF-HF Exécutant -->
+          <div class="card-pro p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-xl font-bold text-gray-900">BF-HF Exécutant</h4>
+              <span class="badge-ht">3 jours</span>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Travaux sous tension HTA
+            </p>
+            <a 
+              href="/formations#bf-hf" 
+              class="text-yellow-700 font-semibold text-sm hover:underline inline-flex items-center gap-1"
+            >
+              Voir le détail
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- BF-HF Chef -->
+          <div class="card-pro p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-xl font-bold text-gray-900">BF-HF Chef</h4>
+              <span class="badge-ht">3 jours</span>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Chef de travaux sous tension HTA
+            </p>
+            <a 
+              href="/formations#bf-hf" 
+              class="text-yellow-700 font-semibold text-sm hover:underline inline-flex items-center gap-1"
+            >
+              Voir le détail
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- BE-HE Mesure -->
+          <div class="card-pro p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-xl font-bold text-gray-900">BE-HE Mesure</h4>
+              <span class="badge-ht">2 jours</span>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Opérations de mesurage HTA
+            </p>
+            <a 
+              href="/formations#be-he" 
+              class="text-yellow-700 font-semibold text-sm hover:underline inline-flex items-center gap-1"
+            >
+              Voir le détail
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- BE-HE Essai -->
+          <div class="card-pro p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-xl font-bold text-gray-900">BE-HE Essai</h4>
+              <span class="badge-ht">2 jours</span>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Opérations d'essais HTA
+            </p>
+            <a 
+              href="/formations#be-he" 
+              class="text-yellow-700 font-semibold text-sm hover:underline inline-flex items-center gap-1"
+            >
+              Voir le détail
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- HE Manœuvre -->
+          <div class="card-pro p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-xl font-bold text-gray-900">HE Manœuvre</h4>
+              <span class="badge-ht">2 jours</span>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Manœuvres en haute tension
+            </p>
+            <a 
+              href="/formations#he-manœuvre" 
+              class="text-yellow-700 font-semibold text-sm hover:underline inline-flex items-center gap-1"
+            >
+              Voir le détail
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- Pourquoi nous choisir -->
-  <section class="py-16 bg-gradient-to-br from-blue-900 to-blue-800 text-white">
+  <section class="py-20 bg-white">
     <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold mb-4">
-          Pourquoi choisir Opinelec Formation ?
+      
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Pourquoi nous choisir ?
         </h2>
+        <div class="divider-line max-w-md mx-auto"></div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         
-        <div class="text-center">
-          <div class="bg-white/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        <!-- Avantage 1 -->
+        <div class="card-pro p-8 text-center" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h3 class="text-xl font-bold mb-2">Formateur Certifié</h3>
-          <p class="text-blue-100">
-            5 ans d'expérience en formation électrique professionnelle
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Certifié Qualiopi</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Certification qualité garantissant l'excellence de nos formations et permettant la prise en charge OPCO.
           </p>
         </div>
 
-        <div class="text-center">
-          <div class="bg-white/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <!-- Avantage 2 -->
+        <div class="card-pro p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Modules Audités</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Contenus pédagogiques audités annuellement avec veille active sur les textes et normes électriques.
+          </p>
+        </div>
+
+        <!-- Avantage 3 -->
+        <div class="card-pro p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Expérience Terrain</h3>
+          <p class="text-gray-600 leading-relaxed">
+            5 ans d'expérience en tant qu'électricien BTP. Formateur de terrain qui adapte chaque session à votre réalité.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section Statistiques -->
+  <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          📈 Notre Impact
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Des chiffres qui témoignent de notre expertise et de notre engagement
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        
+        <!-- Statistique 1 -->
+        <div class="text-center" data-aos="fade-up" data-aos-delay="0">
+          <div class="relative mb-4">
+            <div class="stat-circle">
+              <div class="stat-number" data-count="1275">0</div>
+            </div>
+            <div class="absolute inset-0 animate-ping opacity-20">
+              <div class="stat-circle bg-blue-500"></div>
+            </div>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900">Personnes formées</h3>
+          <p class="text-gray-600 text-sm">Depuis notre création</p>
+        </div>
+
+        <!-- Statistique 2 -->
+        <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="relative mb-4">
+            <div class="stat-circle">
+              <div class="stat-number" data-count="98.5">0</div>
+              <span class="stat-percent">%</span>
+            </div>
+            <div class="absolute inset-0 animate-ping opacity-20">
+              <div class="stat-circle bg-green-500"></div>
+            </div>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900">Taux de satisfaction</h3>
+          <p class="text-gray-600 text-sm">Clients satisfaits</p>
+        </div>
+
+        <!-- Statistique 3 -->
+        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="relative mb-4">
+            <div class="stat-circle">
+              <div class="stat-number" data-count="156">0</div>
+            </div>
+            <div class="absolute inset-0 animate-ping opacity-20">
+              <div class="stat-circle bg-orange-500"></div>
+            </div>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900">Entreprises accompagnées</h3>
+          <p class="text-gray-600 text-sm">Collectivités & PME</p>
+        </div>
+
+        <!-- Statistique 4 -->
+        <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="relative mb-4">
+            <div class="stat-circle">
+              <div class="stat-number" data-count="99.9">0</div>
+              <span class="stat-percent">%</span>
+            </div>
+            <div class="absolute inset-0 animate-ping opacity-20">
+              <div class="stat-circle bg-purple-500"></div>
+            </div>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900">Taux de réussite</h3>
+          <p class="text-gray-600 text-sm">Aux examens d'habilitation</p>
+        </div>
+
+      </div>
+
+      <style>
+        .stat-circle {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          background: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto;
+          position: relative;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+          border: 4px solid transparent;
+          background-clip: padding-box;
+        }
+        
+        .stat-circle::before {
+          content: '';
+          position: absolute;
+          inset: -4px;
+          border-radius: 50%;
+          padding: 4px;
+          background: linear-gradient(135deg, #667eea, #764ba2);
+          -webkit-mask: 
+            linear-gradient(#fff 0 0) content-box, 
+            linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          animation: rotate 3s linear infinite;
+        }
+        
+        @keyframes rotate {
+          100% { transform: rotate(360deg); }
+        }
+        
+        .stat-number {
+          font-size: 2.5rem;
+          font-weight: 800;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        
+        .stat-percent {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: #667eea;
+          margin-left: 2px;
+        }
+      </style>
+
+      <script>
+        // Animation des compteurs - Version corrigée TypeScript
+        document.addEventListener('DOMContentLoaded', () => {
+          const counters = document.querySelectorAll('.stat-number');
+          
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting && entry.target instanceof HTMLElement) {
+                const counter = entry.target;
+                const dataCount = counter.getAttribute('data-count');
+                
+                // Vérifier que l'attribut existe et est un nombre valide
+                if (!dataCount) return;
+                
+                const target = parseFloat(dataCount);
+                if (isNaN(target)) return;
+                
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+                
+                const updateCounter = () => {
+                  current += step;
+                  if (current < target) {
+                    // Convertir en chaîne de caractères
+                    counter.textContent = Math.floor(current).toString();
+                    requestAnimationFrame(updateCounter);
+                  } else {
+                    // Formater le nombre avec décimal si nécessaire
+                    let finalValue: string;
+                    if (target % 1 !== 0) {
+                      finalValue = target.toFixed(1);
+                    } else {
+                      finalValue = Math.floor(target).toString();
+                    }
+                    counter.textContent = finalValue;
+                  }
+                };
+                
+                updateCounter();
+                observer.unobserve(counter);
+              }
+            });
+          }, { threshold: 0.5 });
+          
+          counters.forEach(counter => {
+            if (counter instanceof HTMLElement) {
+              observer.observe(counter);
+            }
+          });
+        });
+      </script>
+    </div>
+  </section>
+
+  <!-- Zones d'intervention -->
+  <section class="section-navy text-white py-20">
+    <div class="container mx-auto px-4">
+      
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+          Zones d'Intervention
+        </h2>
+        <p class="text-xl text-blue-100 max-w-2xl mx-auto">
+          Nous intervenons dans vos locaux partout en France
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+        
+        <!-- Auvergne-Rhône-Alpes -->
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 text-center" data-aos="fade-right">
+          <div class="w-20 h-20 mx-auto mb-6 bg-white/20 rounded-2xl flex items-center justify-center">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
           </div>
-          <h3 class="text-xl font-bold mb-2">Proximité</h3>
+          <h3 class="text-2xl font-bold mb-3">Auvergne-Rhône-Alpes</h3>
           <p class="text-blue-100">
-            Interventions dans vos locaux ou centres partenaires proches
+            Interventions régulières dans toute la région
           </p>
         </div>
 
-        <div class="text-center">
-          <div class="bg-white/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <!-- Occitanie -->
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 text-center" data-aos="fade-left">
+          <div class="w-20 h-20 mx-auto mb-6 bg-white/20 rounded-2xl flex items-center justify-center">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
           </div>
-          <h3 class="text-xl font-bold mb-2">Réactivité</h3>
+          <h3 class="text-2xl font-bold mb-3">Occitanie</h3>
           <p class="text-blue-100">
-            Réponse rapide à vos demandes et adaptation à vos contraintes
+            Disponible pour vos formations sur demande
           </p>
         </div>
 
       </div>
+
+      <div class="text-center" data-aos="fade-up">
+        <p class="text-lg text-blue-100">
+          Autres régions : <a href="/contact" class="text-white font-bold hover:underline">nous consulter</a>
+        </p>
+      </div>
+
     </div>
   </section>
+ 
+  <!-- Témoignages -->
+  <Testimonials />
 
-  <!-- Call-to-Action -->
-  <section class="py-20 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-4xl font-bold text-gray-900 mb-6">
+  <!-- Quiz -->
+  <QuizHabilitation />
+
+  <!-- CTA Final -->
+  <section class="py-20 bg-gradient-to-br from-orange-500 to-red-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <div class="max-w-3xl mx-auto" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
           Prêt à former vos équipes ?
         </h2>
-        <p class="text-xl text-gray-600 mb-8">
-          Contactez-nous pour obtenir un devis personnalisé adapté à vos besoins
+        <p class="text-xl md:text-2xl mb-10 text-orange-100">
+          Demandez votre devis gratuit et personnalisé<br />
+          <strong>Réponse sous 48h</strong>
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a 
-            href="/contact" 
-            class="bg-blue-900 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-800 transition shadow-lg"
-          >
-            Demander un devis gratuit
-          </a>
-          <a 
-            href="tel:0635252465" 
-            class="border-2 border-blue-900 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-900 hover:text-white transition"
-          >
-            Appelez-nous : 06 35 25 24 65
-          </a>
-        </div>
+        <a href="/contact" class="inline-flex items-center gap-3 bg-white text-orange-600 px-10 py-5 rounded-xl font-bold text-lg hover:shadow-2xl transition-all hover:scale-105">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          Nous contacter
+        </a>
       </div>
     </div>
   </section>
 
+   <!-- Logo Qualiopi flottant -->
+ <div class="hidden lg:block fixed bottom-8 right-8 z-40">
+   <img 
+     src="/qualiopi_bdp.png" 
+     alt="Certification Qualiopi" 
+     class="w-40 opacity-95 hover:opacity-100 transition-opacity hover:scale-105 transform transition-transform cursor-pointer shadow-2xl rounded-lg"
+   />
+ </div>
+
+ <Footer />
 </Layout>

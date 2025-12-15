@@ -1,77 +1,101 @@
 ---
-// Header avec navigation
+// Header professionnel
 ---
 
-<header class="bg-blue-900 text-white shadow-lg">
-  <nav class="container mx-auto px-4 py-4">
-    <div class="flex items-center justify-between">
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+  <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between py-4">
+      
       <!-- Logo -->
-      <div class="flex items-center space-x-2">
-        <div class="text-2xl font-bold">
-          <a href="/" class="hover:text-blue-200 transition">
-            Opinelec Formation
-          </a>
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-800 to-blue-900 flex items-center justify-center group-hover:shadow-lg transition-all">
+          <svg class="w-7 h-7 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
         </div>
-      </div>
+        <div>
+          <div class="text-xl font-bold text-gray-900">Opinelec Formation</div>
+          <div class="text-xs text-gray-500">Certifié Qualiopi</div>
+        </div>
+      </a>
 
-      <!-- Menu Desktop -->
-      <div class="hidden md:flex items-center space-x-8">
-        <a href="/" class="hover:text-blue-200 transition font-medium">
+      <!-- Navigation desktop -->
+      <nav class="hidden lg:flex items-center gap-1">
+        <a 
+          href="/" 
+          class="px-4 py-2 rounded-lg font-semibold text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-all"
+        >
           Accueil
         </a>
-        <a href="/formations" class="hover:text-blue-200 transition font-medium">
+        <a 
+          href="/qui-sommes-nous" 
+          class="px-4 py-2 rounded-lg font-semibold text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-all"
+        >
+          Qui sommes-nous
+        </a>
+        <a 
+          href="/formations" 
+          class="px-4 py-2 rounded-lg font-semibold text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-all"
+        >
           Formations
         </a>
-        <a href="/contact" class="hover:text-blue-200 transition font-medium">
+        <a 
+          href="/contact" 
+          class="px-4 py-2 rounded-lg font-semibold text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-all"
+        >
           Contact
         </a>
         <a 
-          href="/contact#devis" 
-          class="bg-white text-blue-900 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition"
+          href="/contact" 
+          class="btn-primary ml-2"
         >
           Demander un devis
         </a>
-      </div>
+      </nav>
 
-      <!-- Bouton Menu Mobile -->
+      <!-- Bouton menu mobile -->
       <button 
+        class="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition"
         id="mobile-menu-button"
-        class="md:hidden text-white focus:outline-none"
-        aria-label="Menu"
       >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
-    </div>
 
-    <!-- Menu Mobile (caché par défaut) -->
-    <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
-      <a href="/" class="block py-2 hover:text-blue-200 transition">
+    </div>
+  </div>
+
+  <!-- Menu mobile -->
+  <div 
+    class="lg:hidden hidden border-t border-gray-200 bg-white"
+    id="mobile-menu"
+  >
+    <nav class="container mx-auto px-4 py-4 flex flex-col gap-2">
+      <a href="/" class="px-4 py-3 rounded-lg font-semibold text-gray-700 hover:bg-gray-50 transition">
         Accueil
       </a>
-      <a href="/formations" class="block py-2 hover:text-blue-200 transition">
+      <a href="/qui-sommes-nous" class="px-4 py-3 rounded-lg font-semibold text-gray-700 hover:bg-gray-50 transition">
+        Qui sommes-nous
+      </a>
+      <a href="/formations" class="px-4 py-3 rounded-lg font-semibold text-gray-700 hover:bg-gray-50 transition">
         Formations
       </a>
-      <a href="/contact" class="block py-2 hover:text-blue-200 transition">
+      <a href="/contact" class="px-4 py-3 rounded-lg font-semibold text-gray-700 hover:bg-gray-50 transition">
         Contact
       </a>
-      <a 
-        href="/contact#devis" 
-        class="block bg-white text-blue-900 px-4 py-2 rounded-lg font-semibold text-center hover:bg-blue-50 transition mt-2"
-      >
+      <a href="/contact" class="btn-primary mt-2">
         Demander un devis
       </a>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </header>
 
 <script>
-  // Toggle menu mobile
-  const button = document.getElementById('mobile-menu-button');
-  const menu = document.getElementById('mobile-menu');
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
   
-  button?.addEventListener('click', () => {
-    menu?.classList.toggle('hidden');
+  menuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
   });
 </script>
