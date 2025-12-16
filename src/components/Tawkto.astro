@@ -1,0 +1,46 @@
+<!-- Start of Tawk.to Script -->
+<script is:inline>
+  // Configuration initiale de l'API Tawk.to
+  var Tawk_API = Tawk_API || {};
+  var Tawk_LoadStart = new Date();
+
+  // Personnalisation avancée (définie avant le chargement du widget)
+  Tawk_API.onLoad = function () {
+    // Cacher le widget par défaut
+    Tawk_API.hideWidget();
+
+    // Ouvrir le widget quand l'utilisateur clique sur #chat-button
+    const chatButton = document.getElementById('chat-button');
+    if (chatButton) {
+      chatButton.addEventListener('click', function () {
+        Tawk_API.maximize();
+      });
+    }
+
+    // Afficher le widget après 10 secondes
+    setTimeout(function () {
+      Tawk_API.showWidget();
+    }, 10000);
+
+    // Afficher le widget si l'utilisateur semble vouloir quitter (mouseleave + position Y)
+    document.addEventListener('mouseleave', function (e) {
+      if (e.clientY < 10) {
+        Tawk_API.showWidget();
+      }
+    });
+  };
+</script>
+
+<script is:inline>
+  // Chargement asynchrone du script Tawk.to
+  (function () {
+    var s1 = document.createElement('script');
+    var s0 = document.getElementsByTagName('script')[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/69411c2e65b580197cc603fb/1jcj5c5vc';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    s0.parentNode.insertBefore(s1, s0);
+  })();
+</script>
+<!-- End of Tawk.to Script -->

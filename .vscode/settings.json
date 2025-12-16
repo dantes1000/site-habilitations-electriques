@@ -1,3 +1,9 @@
 {
-    "git.autofetch": true
+  "git.autofetch": true,
+  "css.lint.unknownAtRules": "ignore",
+  "tailwindCSS.includeLanguages": {
+    "astro": "html",
+    "css": "css"
+  },
+  "tailwindCSS.emmetCompletions": true
 }
