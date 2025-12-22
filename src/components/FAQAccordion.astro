@@ -1,0 +1,115 @@
+---
+import type { FAQ } from '../types/formation';
+
+interface Props {
+  faqs: FAQ[];
+  title?: string;
+}
+
+const { faqs, title = "Questions fréquentes" } = Astro.props;
+---
+
+<div class="bg-white rounded-2xl p-8 shadow-lg">
+  
+  <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3">
+    <svg class="w-8 h-8 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    {title}
+  </h2>
+  
+  <div class="space-y-4">
+    {faqs.map((faq, index) => (
+      <div class="faq-accordion-item border border-gray-200 rounded-lg overflow-hidden">
+        
+        <!-- Question cliquable -->
+        <button 
+          class="faq-accordion-header w-full flex items-start justify-between p-5 bg-white hover:bg-blue-50 transition-colors text-left gap-4"
+          data-index={index}
+        >
+          <div class="flex items-start gap-3 flex-1">
+            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="text-blue-800 font-bold">Q</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 leading-relaxed">
+              {faq.question}
+            </h3>
+          </div>
+          <svg 
+            class="faq-accordion-icon w-6 h-6 text-blue-800 transform transition-transform duration-300 flex-shrink-0 mt-1"
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+          </svg>
+        </button>
+        
+        <!-- Réponse déroulante -->
+        <div class="faq-accordion-content overflow-hidden transition-all duration-300 max-h-0">
+          <div class="px-5 pb-5 bg-blue-50">
+            <div class="flex items-start gap-3 pt-3">
+              <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-orange-800 font-bold">R</span>
+              </div>
+              <p class="text-gray-700 leading-relaxed flex-1">
+                {faq.answer}
+              </p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    ))}
+  </div>
+  
+  <!-- Note supplémentaire -->
+  <div class="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+    <p class="text-sm text-gray-700">
+      <strong>Une autre question ?</strong> N'hésitez pas à nous contacter au 
+      <a href="tel:0635252465" class="text-blue-800 font-semibold hover:underline">06 35 25 24 65</a> 
+      ou par <a href="/contact" class="text-blue-800 font-semibold hover:underline">email</a>.
+    </p>
+  </div>
+  
+</div>
+
+<script>
+  // Script pour gérer l'accordéon FAQ
+  document.addEventListener('DOMContentLoaded', () => {
+    const headers = document.querySelectorAll('.faq-accordion-header');
+    
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.closest('.faq-accordion-item');
+        const content = item?.querySelector('.faq-accordion-content');
+        const icon = header.querySelector('.faq-accordion-icon');
+        
+        if (!item || !content || !icon) return;
+        
+        // Toggle l'état ouvert/fermé
+        const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+        
+        if (isOpen) {
+          // Fermer
+          content.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          // Ouvrir
+          content.style.maxHeight = content.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)'; // Le + devient un X
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .faq-accordion-content {
+    transition: max-height 0.3s ease-in-out;
+  }
+  
+  .faq-accordion-icon {
+    transition: transform 0.3s ease-in-out;
+  }
+</style>

@@ -1,0 +1,85 @@
+---
+import type { Formation } from '../types/formation';
+
+interface Props {
+  formation: Formation;
+}
+
+const { formation } = Astro.props;
+
+const badgeColors: Record<string, string> = {
+  blue: 'badge-info',
+  orange: 'badge-bt',
+  'orange-dark': 'badge-bt',
+  yellow: 'badge-ht',
+  green: 'bg-green-100 text-green-800'
+};
+
+const badgeColor = badgeColors[formation.color] || 'badge-info';
+---
+
+<div class="card-pro p-6 hover:shadow-xl transition-shadow duration-300">
+  
+  <!-- Badge code formation -->
+  <span class={`${badgeColor} mb-4`}>{formation.code}</span>
+  
+  <!-- Titre -->
+  <h3 class="text-xl font-bold text-gray-900 mb-3">
+    {formation.title}
+  </h3>
+  
+  <!-- Description courte -->
+  <p class="text-gray-600 mb-4 leading-relaxed">
+    {formation.shortDesc}
+  </p>
+  
+  <!-- Informations pratiques en badges -->
+  <div class="flex flex-wrap gap-2 mb-4">
+    
+    <!-- Durée -->
+    <div class="inline-flex items-center gap-1 bg-blue-50 text-blue-800 px-3 py-1 rounded-full text-sm">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <span class="font-medium">{formation.duration.initial}</span>
+    </div>
+    
+    <!-- Tarif intra -->
+    <div class="inline-flex items-center gap-1 bg-green-50 text-green-800 px-3 py-1 rounded-full text-sm">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+      <span class="font-medium">Intra {formation.pricing.intra}</span>
+    </div>
+    
+    <!-- Recyclage si applicable -->
+    {formation.duration.recyclage && (
+      <div class="inline-flex items-center gap-1 bg-orange-50 text-orange-800 px-3 py-1 rounded-full text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+        </svg>
+        <span class="font-medium">Recyclage {formation.recyclageFrequency}</span>
+      </div>
+    )}
+  </div>
+  
+  <!-- Métiers concernés (aperçu) -->
+  <div class="mb-4 pb-4 border-b border-gray-200">
+    <p class="text-sm text-gray-500 mb-2 font-semibold">Exemples de métiers :</p>
+    <p class="text-sm text-gray-700">
+      {formation.publicConcerne.metiers.slice(0, 3).join(', ')}...
+    </p>
+  </div>
+  
+  <!-- CTA -->
+  <a 
+    href={`/formations/${formation.slug}`}
+    class="inline-flex items-center gap-2 text-blue-800 font-semibold hover:underline group"
+  >
+    <span>En savoir plus</span>
+    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+    </svg>
+  </a>
+  
+</div>

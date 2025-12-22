@@ -1,0 +1,96 @@
+---
+import type { ProgramModule } from '../types/formation';
+
+interface Props {
+  modules: ProgramModule[];
+}
+
+const { modules } = Astro.props;
+---
+
+<div class="space-y-4">
+  {modules.map((module, index) => (
+    <div class="program-accordion-item border border-gray-200 rounded-lg overflow-hidden">
+      
+      <!-- Header cliquable -->
+      <button 
+        class="program-accordion-header w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors text-left"
+        data-index={index}
+      >
+        <div class="flex items-center gap-3 flex-1">
+          <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-lg">{index + 1}</span>
+          </div>
+          <h4 class="text-lg font-bold text-gray-900">{module.title}</h4>
+        </div>
+        <svg 
+          class="program-accordion-icon w-6 h-6 text-blue-800 transform transition-transform duration-300"
+          fill="none" 
+          stroke="currentColor" 
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      
+      <!-- Contenu déroulant -->
+      <div class="program-accordion-content overflow-hidden transition-all duration-300 max-h-0">
+        <div class="p-5 pt-0 bg-gray-50">
+          <ul class="space-y-3">
+            {module.items.map(item => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-800 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-gray-700 leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  ))}
+</div>
+
+<script>
+  // Script pour gérer l'accordéon
+  document.addEventListener('DOMContentLoaded', () => {
+    const headers = document.querySelectorAll('.program-accordion-header');
+    
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.closest('.program-accordion-item');
+        const content = item?.querySelector('.program-accordion-content');
+        const icon = header.querySelector('.program-accordion-icon');
+        
+        if (!item || !content || !icon) return;
+        
+        // Toggle l'état ouvert/fermé
+        const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+        
+        if (isOpen) {
+          // Fermer
+          content.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          // Ouvrir
+          content.style.maxHeight = content.scrollHeight + 'px';
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+    
+    // Ouvrir le premier module par défaut
+    const firstHeader = headers[0] as HTMLElement;
+    if (firstHeader) {
+      firstHeader.click();
+    }
+  });
+</script>
+
+<style>
+  .program-accordion-content {
+    transition: max-height 0.3s ease-in-out;
+  }
+</style>
