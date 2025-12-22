@@ -1,0 +1,61 @@
+/* empty css                                             */
+import { c as createComponent, d as createAstro, r as renderComponent, a as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_r2uXbYCR.mjs';
+import 'piccolore';
+import 'html-escaper';
+import { $ as $$Layout } from '../chunks/Layout_CkIP1fqv.mjs';
+export { renderers } from '../renderers.mjs';
+
+const $$Astro = createAstro();
+const $$MentionsLegales = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
+  Astro2.self = $$MentionsLegales;
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Mentions L\xE9gales - Habilitelec Formations", "description": "Mentions l\xE9gales et informations juridiques d'Habilitelec Formations" }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section class="py-16 bg-white"> <div class="container mx-auto px-4"> <div class="max-w-4xl mx-auto"> <h1 class="text-4xl font-bold text-gray-900 mb-8">
+Mentions Légales
+</h1> <div class="prose prose-lg max-w-none"> <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4">Éditeur du site</h2> <p class="text-gray-700 mb-4"> <strong>Raison sociale :</strong> Habilitelec Formations<br> <strong>Forme juridique :</strong> Entrepreneur Individuel<br> <strong>SIRET :</strong> [Votre numéro SIRET]<br> <strong>Adresse :</strong> [Votre adresse]<br> <strong>Email :</strong> habilitelec@gmail.com<br> <strong>Téléphone :</strong> 06 35 25 24 65
+</p> <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4">Directeur de publication</h2> <p class="text-gray-700 mb-4">
+[Votre nom complet]
+</p> <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4">Hébergement</h2> <p class="text-gray-700 mb-4">
+Ce site est hébergé par :<br> <strong>Netlify, Inc.</strong><br>
+2325 3rd Street, Suite 215<br>
+San Francisco, CA 94107, USA<br>
+Site web : <a href="https://www.netlify.com" class="text-blue-900 hover:underline" target="_blank" rel="noopener">www.netlify.com</a> </p> <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4">Numéro de déclaration d'activité</h2> <p class="text-gray-700 mb-4">
+Numéro de déclaration d'activité : [Votre numéro NDA]<br> <em>Cet enregistrement ne vaut pas agrément de l'État.</em> </p> <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4">Propriété intellectuelle</h2> <p class="text-gray-700 mb-4">
+L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.
+</p> <p class="text-gray-700 mb-4">
+La reproduction de tout ou partie de ce site sur un support électronique quel qu'il soit est formellement interdite sauf autorisation expresse du directeur de la publication.
+</p> <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4">Protection des données personnelles</h2> <p class="text-gray-700 mb-4">
+Conformément à la loi « Informatique et Libertés » du 6 janvier 1978 modifiée et au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition aux données personnelles vous concernant.
+</p> <p class="text-gray-700 mb-4">
+Pour exercer ces droits, vous pouvez nous contacter par email à : <a href="mailto:habilitelec@gmail.com" class="text-blue-900 hover:underline">habilitelec@gmail.com</a> </p> <h3 class="text-xl font-bold text-gray-900 mt-6 mb-3">Collecte des données</h3> <p class="text-gray-700 mb-4">
+Les informations recueillies via le formulaire de contact sont destinées uniquement à Habilitelec Formations pour traiter votre demande de devis ou d'information.
+</p> <p class="text-gray-700 mb-4">
+Les données collectées sont :<br>
+- Nom et prénom<br>
+- Email<br>
+- Téléphone<br>
+- Entreprise<br>
+- Informations relatives à votre demande de formation
+</p> <p class="text-gray-700 mb-4">
+Ces données sont conservées pendant 3 ans maximum et ne sont en aucun cas transmises à des tiers.
+</p> <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4">Cookies</h2> <p class="text-gray-700 mb-4">
+Ce site n'utilise pas de cookies de suivi ou de publicité. Seuls des cookies techniques essentiels au fonctionnement du site peuvent être utilisés.
+</p> <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4">Crédits</h2> <p class="text-gray-700 mb-4">
+Site web développé avec Astro et Tailwind CSS.<br>
+Design et développement : Habilitelec Formations
+</p> <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4">Contact</h2> <p class="text-gray-700 mb-4">
+Pour toute question concernant ces mentions légales, vous pouvez nous contacter :<br> <strong>Email :</strong> <a href="mailto:habilitelec@gmail.com" class="text-blue-900 hover:underline">habilitelec@gmail.com</a><br> <strong>Téléphone :</strong> <a href="tel:0635252465" class="text-blue-900 hover:underline">06 35 25 24 65</a> </p> </div> </div> </div> </section> ` })}`;
+}, "C:/Users/j-opi/OneDrive/Documents/OneDrive Perso/OneDrive/Collab_GS.JMO/Projets/site-habilitations-electriques/src/pages/mentions-legales.astro", void 0);
+
+const $$file = "C:/Users/j-opi/OneDrive/Documents/OneDrive Perso/OneDrive/Collab_GS.JMO/Projets/site-habilitations-electriques/src/pages/mentions-legales.astro";
+const $$url = "/mentions-legales";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$MentionsLegales,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

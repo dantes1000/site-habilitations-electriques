@@ -1,103 +1,78 @@
 ---
 import Layout from '../components/layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Mentions Légales - Habilitelec Formations" description="Mentions légales et informations juridiques d'Habilitelec Formations">
+<Layout title="Mentions Légales - Habilitelec Formations" description="Mentions légales Habilitelec Formations - Informations légales conformément à la loi française">
+  <Header />
   
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto">
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h1 class="text-4xl font-bold text-gray-900 mb-8">Mentions Légales</h1>
+      
+      <div class="prose prose-lg max-w-none space-y-8">
         
-        <h1 class="text-4xl font-bold text-gray-900 mb-8">
-          Mentions Légales
-        </h1>
+        <div class="card-pro p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">Éditeur du site</h2>
+          <p><strong>Raison sociale :</strong> Habilitelec Formations (EI)</p>
+          <p><strong>Forme juridique :</strong> Entreprise Individuelle</p>
+          <p><strong>Responsable de publication :</strong> [Nom du responsable]</p>
+          <p><strong>Adresse :</strong> [Adresse complète]</p>
+          <p><strong>SIRET :</strong> [Numéro SIRET]</p>
+          <p><strong>Numéro de déclaration d'activité :</strong> [N° DREETS]</p>
+          <p><strong>Email :</strong> contact@habilitelec.fr</p>
+          <p><strong>Téléphone :</strong> 06 35 25 24 65</p>
+        </div>
 
-        <div class="prose prose-lg max-w-none">
-          
-          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4">Éditeur du site</h2>
-          <p class="text-gray-700 mb-4">
-            <strong>Raison sociale :</strong> Habilitelec Formations<br />
-            <strong>Forme juridique :</strong> Entrepreneur Individuel<br />
-            <strong>SIRET :</strong> [Votre numéro SIRET]<br />
-            <strong>Adresse :</strong> [Votre adresse]<br />
-            <strong>Email :</strong> habilitelec@gmail.com<br />
-            <strong>Téléphone :</strong> 06 35 25 24 65
-          </p>
+        <div class="card-pro p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">Hébergeur du site</h2>
+          <p><strong>Netlify, Inc.</strong></p>
+          <p>44 Montgomery Street, Suite 300<br/>San Francisco, CA 94104<br/>United States</p>
+        </div>
 
-          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4">Directeur de publication</h2>
-          <p class="text-gray-700 mb-4">
-            [Votre nom complet]
-          </p>
+        <div class="card-pro p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">Propriété intellectuelle</h2>
+          <p>L'ensemble du contenu de ce site (textes, images, graphismes, logo, icônes, sons, logiciels) est la propriété exclusive de Habilitelec Formations, à l'exception des marques, logos ou contenus appartenant à d'autres sociétés partenaires ou auteurs.</p>
+          <p>Toute reproduction, distribution, modification, adaptation, retransmission ou publication de ces différents éléments est strictement interdite sans l'accord exprès par écrit de Habilitelec Formations.</p>
+        </div>
 
-          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4">Hébergement</h2>
-          <p class="text-gray-700 mb-4">
-            Ce site est hébergé par :<br />
-            <strong>Netlify, Inc.</strong><br />
-            2325 3rd Street, Suite 215<br />
-            San Francisco, CA 94107, USA<br />
-            Site web : <a href="https://www.netlify.com" class="text-blue-900 hover:underline" target="_blank" rel="noopener">www.netlify.com</a>
-          </p>
+        <div class="card-pro p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">Protection des données personnelles</h2>
+          <p>Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition aux données personnelles vous concernant.</p>
+          <p>Pour exercer ce droit, contactez-nous à : <a href="mailto:contact@habilitelec.fr" class="text-blue-600 hover:underline">contact@habilitelec.fr</a></p>
+          <p>Pour plus d'informations, consultez notre <a href="/politique-confidentialite" class="text-blue-600 hover:underline">Politique de Confidentialité</a>.</p>
+        </div>
 
-          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4">Numéro de déclaration d'activité</h2>
-          <p class="text-gray-700 mb-4">
-            Numéro de déclaration d'activité : [Votre numéro NDA]<br />
-            <em>Cet enregistrement ne vaut pas agrément de l'État.</em>
-          </p>
+        <div class="card-pro p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">Cookies</h2>
+          <p>Ce site utilise des cookies strictement nécessaires au fonctionnement du site et à la mesure d'audience (Google Analytics). Aucun cookie publicitaire ou de réseaux sociaux n'est utilisé.</p>
+          <p>Vous pouvez configurer votre navigateur pour refuser les cookies, mais certaines fonctionnalités du site pourraient ne plus être accessibles.</p>
+        </div>
 
-          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4">Propriété intellectuelle</h2>
-          <p class="text-gray-700 mb-4">
-            L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.
-          </p>
-          <p class="text-gray-700 mb-4">
-            La reproduction de tout ou partie de ce site sur un support électronique quel qu'il soit est formellement interdite sauf autorisation expresse du directeur de la publication.
-          </p>
+        <div class="card-pro p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">Responsabilité</h2>
+          <p>Les informations présentes sur ce site sont fournies à titre indicatif. Habilitelec Formations s'efforce d'assurer l'exactitude et la mise à jour des informations, mais ne peut garantir qu'elles soient complètes, précises, exactes, exhaustives et dépourvues de toute erreur.</p>
+          <p>Habilitelec Formations décline toute responsabilité en cas d'erreur, inexactitude ou omission dans ces informations.</p>
+        </div>
 
-          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4">Protection des données personnelles</h2>
-          <p class="text-gray-700 mb-4">
-            Conformément à la loi « Informatique et Libertés » du 6 janvier 1978 modifiée et au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition aux données personnelles vous concernant.
-          </p>
-          <p class="text-gray-700 mb-4">
-            Pour exercer ces droits, vous pouvez nous contacter par email à : <a href="mailto:habilitelec@gmail.com" class="text-blue-900 hover:underline">habilitelec@gmail.com</a>
-          </p>
-          
-          <h3 class="text-xl font-bold text-gray-900 mt-6 mb-3">Collecte des données</h3>
-          <p class="text-gray-700 mb-4">
-            Les informations recueillies via le formulaire de contact sont destinées uniquement à Habilitelec Formations pour traiter votre demande de devis ou d'information.
-          </p>
-          <p class="text-gray-700 mb-4">
-            Les données collectées sont :<br />
-            - Nom et prénom<br />
-            - Email<br />
-            - Téléphone<br />
-            - Entreprise<br />
-            - Informations relatives à votre demande de formation
-          </p>
-          <p class="text-gray-700 mb-4">
-            Ces données sont conservées pendant 3 ans maximum et ne sont en aucun cas transmises à des tiers.
-          </p>
+        <div class="card-pro p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">Liens externes</h2>
+          <p>Ce site peut contenir des liens hypertextes vers d'autres sites. Habilitelec Formations n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu ou leur accessibilité.</p>
+        </div>
 
-          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4">Cookies</h2>
-          <p class="text-gray-700 mb-4">
-            Ce site n'utilise pas de cookies de suivi ou de publicité. Seuls des cookies techniques essentiels au fonctionnement du site peuvent être utilisés.
-          </p>
+        <div class="card-pro p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">Droit applicable</h2>
+          <p>Les présentes mentions légales sont régies par le droit français. Tout litige relatif à l'utilisation du site sera soumis aux tribunaux compétents.</p>
+        </div>
 
-          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4">Crédits</h2>
-          <p class="text-gray-700 mb-4">
-            Site web développé avec Astro et Tailwind CSS.<br />
-            Design et développement : Habilitelec Formations
-          </p>
-
-          <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4">Contact</h2>
-          <p class="text-gray-700 mb-4">
-            Pour toute question concernant ces mentions légales, vous pouvez nous contacter :<br />
-            <strong>Email :</strong> <a href="mailto:habilitelec@gmail.com" class="text-blue-900 hover:underline">habilitelec@gmail.com</a><br />
-            <strong>Téléphone :</strong> <a href="tel:0635252465" class="text-blue-900 hover:underline">06 35 25 24 65</a>
-          </p>
-
+        <div class="text-center mt-12">
+          <p class="text-gray-600">Dernière mise à jour : Décembre 2025</p>
         </div>
 
       </div>
     </div>
   </section>
 
+  <Footer />
 </Layout>

@@ -1,0 +1,195 @@
+---
+import Layout from '../components/layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Comprendre l'Habilitation Électrique" description="Guide complet habilitation électrique : niveaux, symboles, obligations, choix formation">
+  <Header />
+  
+  <section class="py-16 bg-gradient-to-br from-blue-900 to-blue-800 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-5xl font-bold mb-6">📚 Comprendre l'Habilitation Électrique</h1>
+      <p class="text-xl text-blue-100 max-w-3xl mx-auto">Guide complet pour choisir la bonne formation selon votre métier et vos interventions</p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-5xl space-y-12">
+      
+      <div class="card-pro p-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">🎯 Qu'est-ce que l'habilitation électrique ?</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-4">L'habilitation électrique est une <strong>reconnaissance de la capacité d'une personne</strong> à effectuer des opérations d'ordre électrique ou non électrique dans un environnement présentant des risques électriques.</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-4">Elle est <strong>délivrée par l'employeur</strong> après une formation obligatoire conforme à la <strong>norme NF C18-510</strong>.</p>
+        <div class="bg-yellow-50 p-6 rounded-lg mt-6">
+          <p class="text-gray-800 font-semibold">⚠️ Important : L'organisme de formation délivre une <strong>attestation de formation</strong> et un <strong>avis après formation</strong>. C'est ensuite l'employeur qui délivre le <strong>titre d'habilitation</strong> au salarié.</p>
+        </div>
+      </div>
+
+      <div class="card-pro p-8 bg-gradient-to-br from-red-50 to-orange-50">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">⚡ Pourquoi est-elle obligatoire ?</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="text-xl font-bold text-red-700 mb-3">📊 Les chiffres</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>✓ <strong>200 accidents électriques/an</strong> en France</li>
+              <li>✓ <strong>40 décès/an</strong> par électrocution</li>
+              <li>✓ <strong>4% accidents du travail</strong> = origine électrique</li>
+              <li>✓ <strong>80% accidents</strong> = personnel non électricien</li>
+            </ul>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="text-xl font-bold text-red-700 mb-3">⚖️ Cadre légal</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>✓ Code du Travail <strong>R4544-9 à R4544-11</strong></li>
+              <li>✓ Norme <strong>NF C18-510 (édition 2021)</strong></li>
+              <li>✓ Obligation employeur <strong>L4121-1</strong></li>
+              <li>✓ Sanctions jusqu'à <strong>3 750€ d'amende</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-pro p-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">🔤 Comprendre les symboles d'habilitation</h2>
+        <p class="text-lg text-gray-700 mb-6">Une habilitation se compose de <strong>2 à 3 caractères alphanumériques</strong> :</p>
+        
+        <div class="grid md:grid-cols-3 gap-6 mb-8">
+          <div class="bg-blue-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-blue-900 mb-3">1️⃣ Première lettre</h3>
+            <p class="text-gray-700 mb-2"><strong>Domaine de tension</strong></p>
+            <ul class="text-sm space-y-1 text-gray-600">
+              <li>• <strong>B</strong> = Basse Tension (≤1000V AC)</li>
+              <li>• <strong>H</strong> = Haute Tension (>1000V AC)</li>
+            </ul>
+          </div>
+          <div class="bg-orange-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-orange-900 mb-3">2️⃣ Chiffre/lettre</h3>
+            <p class="text-gray-700 mb-2"><strong>Nature opérations</strong></p>
+            <ul class="text-sm space-y-1 text-gray-600">
+              <li>• <strong>0</strong> = Non électricien</li>
+              <li>• <strong>1</strong> = Exécutant travaux</li>
+              <li>• <strong>2</strong> = Chargé travaux</li>
+              <li>• <strong>S</strong> = Interventions élémentaires</li>
+              <li>• <strong>R</strong> = Dépannage</li>
+              <li>• <strong>C</strong> = Consignation</li>
+            </ul>
+          </div>
+          <div class="bg-green-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-green-900 mb-3">3️⃣ Attribut (optionnel)</h3>
+            <p class="text-gray-700 mb-2"><strong>Précisions</strong></p>
+            <ul class="text-sm space-y-1 text-gray-600">
+              <li>• <strong>V</strong> = Voisinage renforcé BT</li>
+              <li>• <strong>N</strong> = Nettoyage sous tension</li>
+              <li>• <strong>T</strong> = Travaux sous tension</li>
+              <li>• <strong>E</strong> = Essais/mesures</li>
+              <li>• <strong>P</strong> = Photovoltaïque</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">📌 Exemples d'habilitations</h3>
+          <div class="grid md:grid-cols-2 gap-4 text-sm">
+            <div><strong>B0-H0V</strong> → Basse Tension / Non électricien / Voisinage</div>
+            <div><strong>BS</strong> → Basse Tension / Interventions Simples</div>
+            <div><strong>BR</strong> → Basse Tension / Dépannage</div>
+            <div><strong>B2V</strong> → Basse Tension / Chargé travaux / Voisinage</div>
+            <div><strong>BC</strong> → Basse Tension / Consignation</div>
+            <div><strong>BP</strong> → Basse Tension / Photovoltaïque</div>
+            <div><strong>HE</strong> → Haute Tension / Essais</div>
+            <div><strong>HC</strong> → Haute Tension / Consignation</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-pro p-8 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">🎓 Les 4 grandes catégories d'habilitation</h2>
+        
+        <div class="space-y-6">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">1</div>
+              <h3 class="text-2xl font-bold text-gray-900">Personnel Non-Électricien</h3>
+            </div>
+            <p class="text-gray-700 mb-4">Pour travailler <strong>à proximité</strong> d'installations électriques sans intervenir dessus.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge-info">B0-H0V</span>
+              <span class="badge-info">B0-H0V CC</span>
+            </div>
+            <p class="text-sm text-gray-600 mt-3"><strong>Métiers :</strong> Plombiers, peintres, maçons, agents entretien, conducteurs engins...</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold text-xl">2</div>
+              <h3 class="text-2xl font-bold text-gray-900">Interventions Élémentaires BT</h3>
+            </div>
+            <p class="text-gray-700 mb-4">Pour remplacer fusibles, prises, lampes, ou effectuer manœuvres simples.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge-bt">BS</span>
+              <span class="badge-bt">BE Manœuvre</span>
+              <span class="badge-bt bg-green-100 text-green-800">BP Photovoltaïque</span>
+            </div>
+            <p class="text-sm text-gray-600 mt-3"><strong>Métiers :</strong> Agents maintenance, gardiens, électriciens débutants, installateurs solaires...</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center text-white font-bold text-xl">3</div>
+              <h3 class="text-2xl font-bold text-gray-900">Électriciens Basse Tension</h3>
+            </div>
+            <p class="text-gray-700 mb-4">Pour travaux électriques complets, dépannage, consignation BT.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge-bt">B1-B2</span>
+              <span class="badge-bt">BR</span>
+              <span class="badge-bt">BC</span>
+            </div>
+            <p class="text-sm text-gray-600 mt-3"><strong>Métiers :</strong> Électriciens qualifiés, techniciens maintenance, chefs d'équipe électricité...</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-yellow-600 rounded-full flex items-center justify-center text-white font-bold text-xl">4</div>
+              <h3 class="text-2xl font-bold text-gray-900">Haute Tension</h3>
+            </div>
+            <p class="text-gray-700 mb-4">Pour interventions sur installations >1000V (postes HTA, lignes aériennes).</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="badge-ht">HE Manœuvre</span>
+              <span class="badge-ht">HE Essai</span>
+              <span class="badge-ht">HC</span>
+            </div>
+            <p class="text-sm text-gray-600 mt-3"><strong>Métiers :</strong> Électriciens HT, agents ENEDIS/RTE, techniciens postes transformation...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-pro p-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">⏱️ Durée de validité et recyclage</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-green-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-green-900 mb-3">✅ Validité</h3>
+            <p class="text-gray-700 mb-2">L'habilitation électrique est valable <strong>3 ans maximum</strong> à compter de la délivrance par l'employeur.</p>
+            <p class="text-sm text-gray-600 mt-4">⚠️ Exception : si changement de matériel, méthode de travail ou établissement, recyclage anticipé obligatoire.</p>
+          </div>
+          <div class="bg-blue-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-blue-900 mb-3">🔄 Recyclage</h3>
+            <p class="text-gray-700 mb-2">Formation recyclage <strong>obligatoire tous les 3 ans</strong> pour maintenir l'habilitation.</p>
+            <p class="text-sm text-gray-600 mt-4">✓ Durée réduite (1 à 2 jours selon niveau)</p>
+            <p class="text-sm text-gray-600">✓ Révision + mise à jour réglementaire</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="/formations" class="inline-flex items-center gap-3 bg-blue-900 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-blue-800 transition shadow-lg">
+          Voir toutes nos formations
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

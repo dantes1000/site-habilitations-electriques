@@ -1,0 +1,131 @@
+---
+import type { DurationInfo, PricingInfo } from '../types/formation';
+
+interface Props {
+  duration: DurationInfo;
+  pricing: PricingInfo;
+  prerequisites: string[];
+  recyclageFrequency: string;
+  certification: string;
+}
+
+const { duration, pricing, prerequisites, recyclageFrequency, certification } = Astro.props;
+---
+
+<div class="card-pro p-8 bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-200 sticky top-24">
+  
+  <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+    <svg class="w-6 h-6 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    Informations pratiques
+  </h3>
+  
+  <!-- Durée -->
+  <div class="mb-6">
+    <div class="flex items-center gap-2 mb-2">
+      <svg class="w-5 h-5 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <h4 class="font-bold text-gray-900">Durée</h4>
+    </div>
+    <p class="text-gray-700 ml-7">
+      <strong>Initial :</strong> {duration.initial}
+      {duration.recyclage && (
+        <><br /><strong>Recyclage :</strong> {duration.recyclage}</>
+      )}
+    </p>
+  </div>
+  
+  <!-- Tarifs -->
+  <div class="mb-6">
+    <div class="flex items-center gap-2 mb-2">
+      <svg class="w-5 h-5 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+      <h4 class="font-bold text-gray-900">Tarifs formation initiale</h4>
+    </div>
+    <div class="ml-7 space-y-2">
+      <div class="bg-white rounded-lg p-3 border border-blue-200">
+        <p class="text-sm text-gray-600">Intra-entreprise (groupe 1-12 pers)</p>
+        <p class="text-xl font-bold text-blue-900">{pricing.intra}</p>
+      </div>
+      <div class="bg-white rounded-lg p-3 border border-blue-200">
+        <p class="text-sm text-gray-600">Inter-entreprises (par personne)</p>
+        <p class="text-xl font-bold text-blue-900">{pricing.inter}</p>
+      </div>
+      {pricing.recyclageIntra && (
+        <>
+          <p class="text-sm font-semibold text-gray-900 mt-3">Tarifs recyclage :</p>
+          <div class="bg-white rounded-lg p-3 border border-orange-200">
+            <p class="text-sm text-gray-600">Intra : <strong class="text-orange-800">{pricing.recyclageIntra}</strong></p>
+            <p class="text-sm text-gray-600">Inter : <strong class="text-orange-800">{pricing.recyclageInter}</strong></p>
+          </div>
+        </>
+      )}
+    </div>
+  </div>
+  
+  <!-- Pré-requis -->
+  <div class="mb-6">
+    <div class="flex items-center gap-2 mb-2">
+      <svg class="w-5 h-5 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <h4 class="font-bold text-gray-900">Pré-requis</h4>
+    </div>
+    <ul class="ml-7 space-y-1">
+      {prerequisites.map(prereq => (
+        <li class="text-gray-700 text-sm flex items-start gap-2">
+          <span class="text-blue-800 mt-1">•</span>
+          <span>{prereq}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+  
+  <!-- Recyclage -->
+  <div class="mb-6">
+    <div class="flex items-center gap-2 mb-2">
+      <svg class="w-5 h-5 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+      </svg>
+      <h4 class="font-bold text-gray-900">Recyclage</h4>
+    </div>
+    <p class="text-gray-700 ml-7">{recyclageFrequency}</p>
+  </div>
+  
+  <!-- Certification -->
+  <div class="mb-8">
+    <div class="flex items-center gap-2 mb-2">
+      <svg class="w-5 h-5 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+      </svg>
+      <h4 class="font-bold text-gray-900">Certification</h4>
+    </div>
+    <p class="text-gray-700 ml-7">{certification}</p>
+  </div>
+  
+  <!-- CTA -->
+  <div class="space-y-3">
+    <a href="/contact" class="btn-primary w-full justify-center">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+      Demander un devis
+    </a>
+    <a href="tel:0635252465" class="btn-secondary w-full justify-center">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+      </svg>
+      06 35 25 24 65
+    </a>
+  </div>
+  
+  <!-- Note -->
+  <p class="text-xs text-gray-500 mt-4 text-center">
+    Tarifs nets de TVA (non applicable)<br />
+    Devis gratuit sous 48h
+  </p>
+  
+</div>
