@@ -3,9 +3,6 @@ import Layout from '../components/layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Testimonials from '../components/Testimonials.astro';
-import SectionComprendre from '../components/section-comprendre.astro';
-import SectionProcessus from '../components/section-processus.astro';
-import SectionGaranties from '../components/section-garanties.astro';
 ---
 
 <Layout 
@@ -14,44 +11,36 @@ import SectionGaranties from '../components/section-garanties.astro';
 >
   <Header />
 
-  <!-- ================================ 
-       SECTION HERO AVEC DIAPORAMA (3 IMAGES)
-  ================================ -->
+  <!-- SECTION HERO AVEC DIAPORAMA -->
   <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gray-900">
-    <!-- Conteneur du diaporama en fond -->
     <div class="absolute inset-0 z-0">
-      <!-- Image 1 -->
-<div class="absolute inset-0 slide fade" style="animation-delay: 0s;">
-  <img
-    src="/Camille.png"
-    alt="Formation Habilitelec - Expertise pratique"
-    class="w-full h-full object-cover opacity-40"
-    style="filter: grayscale(100%);"
-  />
-</div>
-<!-- Image 2 -->
-<div class="absolute inset-0 slide fade" style="animation-delay: 8s;">
-  <img
-    src="/image.png"
-    alt="Formation Habilitelec - Travail en équipe"
-    class="w-full h-full object-cover opacity-40"
-    style="filter: grayscale(100%);"
-  />
-</div>
-<!-- Image 3 -->
-<div class="absolute inset-0 slide fade" style="animation-delay: 16s;">
-  <img
-    src="/image (1).png"
-    alt="Formation Habilitelec - Environnement technique"
-    class="w-full h-full object-cover opacity-40"
-    style="filter: grayscale(100%);"
-  />
-</div>
-      <!-- Overlay sombre pour améliorer la lisibilité du texte -->
+      <div class="absolute inset-0 slide fade" style="animation-delay: 0s;">
+        <img
+          src="/Camille.png"
+          alt="Formation Habilitelec - Expertise pratique"
+          class="w-full h-full object-cover opacity-40"
+          style="filter: grayscale(100%);"
+        />
+      </div>
+      <div class="absolute inset-0 slide fade" style="animation-delay: 8s;">
+        <img
+          src="/image.png"
+          alt="Formation Habilitelec - Travail en équipe"
+          class="w-full h-full object-cover opacity-40"
+          style="filter: grayscale(100%);"
+        />
+      </div>
+      <div class="absolute inset-0 slide fade" style="animation-delay: 16s;">
+        <img
+          src="/image (1).png"
+          alt="Formation Habilitelec - Environnement technique"
+          class="w-full h-full object-cover opacity-40"
+          style="filter: grayscale(100%);"
+        />
+      </div>
       <div class="absolute inset-0 bg-black/40"></div>
     </div>
 
-    <!-- Contenu superposé (identique au précédent) -->
     <div class="container relative z-10 mx-auto px-4 py-20 text-center text-white max-w-4xl">
       <blockquote class="mb-10">
         <p class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
@@ -87,17 +76,12 @@ import SectionGaranties from '../components/section-garanties.astro';
     </div>
   </section>
 
-  <!-- ================================ 
-       SECTION SUIVANTE AVEC ANIMATION D'INVITATION
-  ================================ -->
+  <!-- SECTION NAVY AVEC ANIMATION -->
   <section id="section-suivante" class="section-navy text-white py-20 md:py-32 section-invite">
     <div class="container mx-auto px-4">
       <div class="max-w-6xl mx-auto">
-      <div class="container mx-auto px-4">
-      <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
-          <!-- Contenu -->
           <div data-aos="fade-right">
             <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
               <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
@@ -131,7 +115,6 @@ import SectionGaranties from '../components/section-garanties.astro';
               </a>
             </div>
 
-            <!-- Stats rapides -->
             <div class="grid grid-cols-3 gap-6">
               <div>
                 <div class="text-3xl font-bold text-white mb-1">5+</div>
@@ -148,7 +131,6 @@ import SectionGaranties from '../components/section-garanties.astro';
             </div>
           </div>
 
-          <!-- Certifications en évidence -->
           <div data-aos="fade-left" class="hidden lg:block">
             <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
               <h3 class="text-2xl font-bold mb-6 text-center">Organisme Certifié</h3>
@@ -210,44 +192,8 @@ import SectionGaranties from '../components/section-garanties.astro';
       </div>
     </div>
   </section>
-  </section> <!-- ← Fermeture de la section "section-suivante" -->
 
-  <style>
-    /* Animation "SURSATT" - Très visible */
-    @keyframes invite-scroll-jump {
-      0%, 100% { 
-        transform: translateY(0); 
-      }
-      20% { 
-        transform: translateY(-45px); /* Sursaut de 45px */
-        box-shadow: 0 15px 40px rgba(220, 38, 38, 0.4); /* Ombre rougeâtre */
-      }
-      40% { 
-        transform: translateY(0); 
-      }
-      60% { 
-        transform: translateY(-35px); 
-        box-shadow: 0 12px 35px rgba(220, 38, 38, 0.3);
-      }
-      80% { 
-        transform: translateY(0); 
-      }
-    }
-
-    .section-invite.animate-invite {
-      animation: invite-scroll-jump 2s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Courbe "élastique" */
-      animation-iteration-count: 2;
-      position: relative;
-      z-index: 9999;
-      background: linear-gradient(to bottom, 
-        rgba(30, 58, 138, 0.9),  /* section-navy avec opacité */
-        rgba(30, 58, 138, 1) 20%,
-        rgba(30, 58, 138, 1) 80%,
-        rgba(30, 58, 138, 0.9)
-      );
-    }
-  </style>
-
+  <!-- NOS FORMATIONS PRINCIPALES -->
   <section class="py-20 bg-white">
     <div class="container mx-auto px-4">
       
@@ -263,7 +209,6 @@ import SectionGaranties from '../components/section-garanties.astro';
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
         
-        <!-- Personnel Non-Électricien -->
         <div class="card-pro p-6" data-aos="fade-up" data-aos-delay="0">
           <div class="icon-electric mb-4">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -285,7 +230,6 @@ import SectionGaranties from '../components/section-garanties.astro';
           </a>
         </div>
 
-        <!-- Interventions BT -->
         <div class="card-pro p-6" data-aos="fade-up" data-aos-delay="100">
           <div class="icon-electric mb-4">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -307,7 +251,6 @@ import SectionGaranties from '../components/section-garanties.astro';
           </a>
         </div>
 
-        <!-- Électricien BT -->
         <div class="card-pro p-6" data-aos="fade-up" data-aos-delay="200">
           <div class="icon-electric mb-4">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -330,7 +273,6 @@ import SectionGaranties from '../components/section-garanties.astro';
           </a>
         </div>
 
-        <!-- Haute Tension -->
         <div class="card-pro p-6" data-aos="fade-up" data-aos-delay="300">
           <div class="icon-electric mb-4">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -357,12 +299,7 @@ import SectionGaranties from '../components/section-garanties.astro';
     </div>
   </section>
 
-
-  <SectionComprendre />
-
-
- 813562fce2ceaeed7581dea032811828e1bb71b5
-  <!-- Pourquoi nous choisir -->
+  <!-- POURQUOI NOUS CHOISIR -->
   <section class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
       
@@ -375,7 +312,6 @@ import SectionGaranties from '../components/section-garanties.astro';
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         
-        <!-- Avantage 1 -->
         <div class="card-pro p-8 text-center" data-aos="fade-up" data-aos-delay="0">
           <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center">
             <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -388,7 +324,6 @@ import SectionGaranties from '../components/section-garanties.astro';
           </p>
         </div>
 
-        <!-- Avantage 2 -->
         <div class="card-pro p-8 text-center" data-aos="fade-up" data-aos-delay="100">
           <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center">
             <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -401,7 +336,6 @@ import SectionGaranties from '../components/section-garanties.astro';
           </p>
         </div>
 
-        <!-- Avantage 3 -->
         <div class="card-pro p-8 text-center" data-aos="fade-up" data-aos-delay="200">
           <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center">
             <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -419,7 +353,7 @@ import SectionGaranties from '../components/section-garanties.astro';
     </div>
   </section>
 
-  <!-- Toutes nos Habilitations - Version Compacte -->
+  <!-- TOUTES NOS HABILITATIONS -->
   <section class="py-20 bg-white">
     <div class="container mx-auto px-4">
       
@@ -433,10 +367,8 @@ import SectionGaranties from '../components/section-garanties.astro';
         </p>
       </div>
 
-      <!-- Grille 4 cartes Habilitations -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-12" data-aos="fade-up">
         
-        <!-- Carte 1 : Non-Électricien -->
         <div class="card-pro p-6 text-center">
           <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -450,7 +382,6 @@ import SectionGaranties from '../components/section-garanties.astro';
           </span>
         </div>
 
-        <!-- Carte 2 : Interventions BT -->
         <div class="card-pro p-6 text-center">
           <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -464,7 +395,6 @@ import SectionGaranties from '../components/section-garanties.astro';
           </span>
         </div>
 
-        <!-- Carte 3 : Électricien BT -->
         <div class="card-pro p-6 text-center">
           <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -479,7 +409,6 @@ import SectionGaranties from '../components/section-garanties.astro';
           </span>
         </div>
 
-        <!-- Carte 4 : Haute Tension -->
         <div class="card-pro p-6 text-center">
           <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -495,7 +424,6 @@ import SectionGaranties from '../components/section-garanties.astro';
 
       </div>
 
-      <!-- CTA vers catalogue complet -->
       <div class="text-center" data-aos="fade-up">
         <a href="/formations" class="inline-flex items-center gap-2 bg-blue-900 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-800 transition shadow-lg hover:shadow-xl hover:scale-105">
           Voir le catalogue détaillé
@@ -508,7 +436,7 @@ import SectionGaranties from '../components/section-garanties.astro';
     </div>
   </section>
 
-  <!-- Autres Formations - Grille 4 cartes -->
+  <!-- AUTRES FORMATIONS -->
   <section class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
       
@@ -522,10 +450,8 @@ import SectionGaranties from '../components/section-garanties.astro';
         </p>
       </div>
 
-      <!-- Grille 4 cartes Autres formations -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-12" data-aos="fade-up">
         
-        <!-- Carte 1 : CACES -->
         <div class="card-pro p-6 text-center">
           <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-orange-500 to-orange-700 rounded-xl flex items-center justify-center">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -539,7 +465,6 @@ import SectionGaranties from '../components/section-garanties.astro';
           </span>
         </div>
 
-        <!-- Carte 2 : AIPR -->
         <div class="card-pro p-6 text-center">
           <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -553,7 +478,6 @@ import SectionGaranties from '../components/section-garanties.astro';
           </span>
         </div>
 
-        <!-- Carte 3 : SST -->
         <div class="card-pro p-6 text-center">
           <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-red-500 to-red-700 rounded-xl flex items-center justify-center">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -567,7 +491,6 @@ import SectionGaranties from '../components/section-garanties.astro';
           </span>
         </div>
 
-        <!-- Carte 4 : Échafaudages -->
         <div class="card-pro p-6 text-center">
           <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -583,7 +506,6 @@ import SectionGaranties from '../components/section-garanties.astro';
 
       </div>
 
-      <!-- CTA vers autres formations -->
       <div class="text-center" data-aos="fade-up">
         <a href="/autres-formations" class="inline-flex items-center gap-2 bg-blue-900 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-800 transition shadow-lg hover:shadow-xl hover:scale-105">
           Découvrir nos formations complémentaires
@@ -596,10 +518,9 @@ import SectionGaranties from '../components/section-garanties.astro';
     </div>
   </section>
 
-  <!-- Témoignages -->
   <Testimonials />
 
-  <!-- CTA Final -->
+  <!-- CTA FINAL -->
   <section class="py-20 bg-gradient-to-br from-orange-500 to-red-600 text-white">
     <div class="container mx-auto px-4 text-center">
       <div class="max-w-3xl mx-auto" data-aos="fade-up">
@@ -620,286 +541,59 @@ import SectionGaranties from '../components/section-garanties.astro';
     </div>
   </section>
 
-  <SectionProcessus />
+  <!-- BOUTON FLOTTANT QUIZ -->
+  <div class="quiz-button-wrapper">
+    <a 
+      href="/quiz"
+      class="fixed bottom-32 right-8 bg-gradient-to-br from-blue-600 to-blue-800 text-white px-6 py-4 rounded-xl shadow-2xl hover:shadow-blue-500/50 transition-all hover:scale-105 flex items-center gap-3 group"
+      style="z-index: 9999;"
+      aria-label="Faire le quiz d'orientation"
+    >
+      <svg class="w-6 h-6 group-hover:rotate-12 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+      </svg>
+      <div class="text-left">
+        <div class="text-xs font-semibold text-blue-200">Quelle formation ?</div>
+        <div class="font-bold">Faire le quiz</div>
+      </div>
+      
+      <div class="quiz-tooltip">
+        Identifiez rapidement l'habilitation électrique adaptée à vos besoins en 2 minutes
+      </div>
+    </a>
+  </div>
 
-  <!-- ============================================
-       SECTION GARANTIES (COMPOSANT INTÉGRÉ)
-  ============================================ -->
-  <SectionGaranties />
+  <!-- BOUTON FLOTTANT CHAT -->
+  <div class="chat-button-wrapper">
+    <button 
+      onclick="Tawk_API?.maximize?.()"
+      class="fixed bottom-8 right-8 bg-gradient-to-br from-green-600 to-emerald-800 text-white px-6 py-4 rounded-xl shadow-2xl hover:shadow-green-500/50 transition-all hover:scale-105 flex items-center gap-3 group"
+      style="z-index: 9998;"
+      aria-label="Ouvrir le chat en direct"
+    >
+      <svg class="w-6 h-6 group-hover:rotate-12 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clip-rule="evenodd"/>
+      </svg>
+      <div class="text-left">
+        <div class="text-xs font-semibold text-green-200">Besoin urgent ?</div>
+        <div class="font-bold">Chat en direct</div>
+      </div>
+      
+      <div class="chat-tooltip">
+        Besoin urgent d'une formation ou question ?<br>Discutez par Chat avec nous !
+      </div>
+    </button>
+  </div>
 
-  <!-- Bouton flottant Quiz avec tooltip -->
-=======
- <!-- ========================================
-   BOUTON FLOTTANT QUIZ AVEC TOOLTIP
-   À remplacer dans index.astro, qui-sommes-nous.astro, formations.astro
-   ======================================== -->
-
-<!-- Bouton flottant Quiz avec tooltip -->
->>>>>>> 813562fce2ceaeed7581dea032811828e1bb71b5
-<div class="quiz-button-wrapper">
-  <a 
-    href="/quiz"
-    class="fixed bottom-32 right-8 bg-gradient-to-br from-blue-600 to-blue-800 text-white px-6 py-4 rounded-xl shadow-2xl hover:shadow-blue-500/50 transition-all hover:scale-105 flex items-center gap-3 group"
-    style="z-index: 9999;"
-    aria-label="Faire le quiz d'orientation"
-  >
-    <svg class="w-6 h-6 group-hover:rotate-12 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-      <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
-    </svg>
-    <div class="text-left">
-      <div class="text-xs font-semibold text-blue-200">Quelle formation ?</div>
-      <div class="font-bold">Faire le quiz</div>
-    </div>
-    
-    <!-- Tooltip -->
-    <div class="quiz-tooltip">
-      Identifiez rapidement l'habilitation électrique adaptée à vos besoins en 2 minutes
-    </div>
-  </a>
-</div>
-
-<style>
-  /* Animation pulse pour attirer l'attention */
-  a[href="/quiz"] {
-    animation: pulseQuiz 2s ease-in-out infinite;
-
-  }
-  
-  @keyframes pulseQuiz {
-    0%, 100% {
-      box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
-    }
-    50% {
-      box-shadow: 0 0 0 15px rgba(37, 99, 235, 0);
-    }
-  }
-  
-  /* Tooltip */
-  .quiz-tooltip {
-    position: absolute;
-    right: 110%;
-    top: 50%;
-    transform: translateY(-50%);
-    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-    color: white;
-    padding: 0.75rem 1rem;
-    border-radius: 0.75rem;
-    font-size: 0.875rem;
-    line-height: 1.4;
-    white-space: normal;
-    width: 240px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    pointer-events: none;
-    z-index: 10000;
-  }
-  
-  /* Flèche du tooltip */
-  .quiz-tooltip::after {
-    content: '';
-    position: absolute;
-    right: -8px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 8px 0 8px 8px;
-    border-color: transparent transparent transparent #1e40af;
-  }
-  
-  /* Afficher le tooltip au survol */
-  a[href="/quiz"]:hover .quiz-tooltip {
-    opacity: 1;
-    visibility: visible;
-    right: 115%;
-  }
-  
-  /* Responsive mobile */
-  @media (max-width: 768px) {
-    a[href="/quiz"] {
-      bottom: 7.5rem !important;
-      right: 1rem !important;
-      padding: 0.75rem 1rem !important;
-      font-size: 0.875rem !important;
-    }
-    
-    a[href="/quiz"] svg {
-      width: 1.25rem !important;
-      height: 1.25rem !important;
-    }
-    
-    a[href="/quiz"] > div:not(.quiz-tooltip) {
-      display: none !important;
-    }
-    
-    /* Tooltip sur mobile : au-dessus du bouton */
-    .quiz-tooltip {
-      right: auto;
-      left: 50%;
-      top: auto;
-      bottom: 110%;
-      transform: translateX(-50%);
-      width: 200px;
-    }
-    
-    .quiz-tooltip::after {
-      right: auto;
-      left: 50%;
-      top: 100%;
-      bottom: auto;
-      transform: translateX(-50%);
-      border-width: 8px 8px 0 8px;
-      border-color: #1e40af transparent transparent transparent;
-    }
-    
-    a[href="/quiz"]:hover .quiz-tooltip {
-      right: auto;
-      bottom: 115%;
-    }
-  }
-</style>
-
-  <!-- Bouton flottant Chat Tawk.to avec tooltip -->
-<div class="chat-button-wrapper">
-  <button 
-    onclick="Tawk_API?.maximize?.()"
-    class="fixed bottom-8 right-8 bg-gradient-to-br from-green-600 to-emerald-800 text-white px-6 py-4 rounded-xl shadow-2xl hover:shadow-green-500/50 transition-all hover:scale-105 flex items-center gap-3 group"
-    style="z-index: 9998;"
-    aria-label="Ouvrir le chat en direct"
-  >
-    <svg class="w-6 h-6 group-hover:rotate-12 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-      <path fill-rule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clip-rule="evenodd"/>
-    </svg>
-    <div class="text-left">
-      <div class="text-xs font-semibold text-green-200">Besoin urgent ?</div>
-      <div class="font-bold">Chat en direct</div>
-    </div>
-    
-    <!-- Tooltip -->
-    <div class="chat-tooltip">
-      Besoin urgent d'une formation ou question ?<br>Discutez par Chat avec nous !
-    </div>
-  </button>
-</div>
-
-<style>
-  /* Animation pulse pour attirer l'attention */
-  button[onclick*="Tawk_API"] {
-    animation: pulseChat 3s ease-in-out infinite;
-  }
-  
-  @keyframes pulseChat {
-    0%, 100% {
-      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-    }
-    50% {
-      box-shadow: 0 0 0 15px rgba(16, 185, 129, 0);
-    }
-  }
-  
-  /* Tooltip */
-  .chat-tooltip {
-    position: absolute;
-    right: 110%;
-    top: 50%;
-    transform: translateY(-50%);
-    background: linear-gradient(135deg, #047857 0%, #065f46 100%);
-    color: white;
-    padding: 0.75rem 1rem;
-    border-radius: 0.75rem;
-    font-size: 0.875rem;
-    line-height: 1.4;
-    white-space: normal;
-    width: 260px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    pointer-events: none;
-    z-index: 10000;
-  }
-  
-  /* Flèche du tooltip */
-  .chat-tooltip::after {
-    content: '';
-    position: absolute;
-    right: -8px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 8px 0 8px 8px;
-    border-color: transparent transparent transparent #065f46;
-  }
-  
-  /* Afficher le tooltip au survol */
-  button[onclick*="Tawk_API"]:hover .chat-tooltip {
-    opacity: 1;
-    visibility: visible;
-    right: 115%;
-  }
-  
-  /* Responsive mobile */
-  @media (max-width: 768px) {
-    button[onclick*="Tawk_API"] {
-      bottom: 1rem !important;
-      right: 1rem !important;
-      padding: 0.75rem 1rem !important;
-      font-size: 0.875rem !important;
-    }
-    
-    button[onclick*="Tawk_API"] svg {
-      width: 1.25rem !important;
-      height: 1.25rem !important;
-    }
-    
-    button[onclick*="Tawk_API"] > div:not(.chat-tooltip) {
-      display: none !important;
-    }
-    
-    /* Tooltip sur mobile : au-dessus du bouton */
-    .chat-tooltip {
-      right: auto;
-      left: 50%;
-      top: auto;
-      bottom: 110%;
-      transform: translateX(-50%);
-      width: 220px;
-    }
-    
-    .chat-tooltip::after {
-      right: auto;
-      left: 50%;
-      top: 100%;
-      bottom: auto;
-      transform: translateX(-50%);
-      border-width: 8px 8px 0 8px;
-      border-color: #065f46 transparent transparent transparent;
-    }
-    
-    button[onclick*="Tawk_API"]:hover .chat-tooltip {
-      right: auto;
-      bottom: 115%;
-    }
-  }
-</style>
-
-  <!-- Configuration de l'API Tawk.to -->
   <script is:inline>
     var Tawk_API = Tawk_API || {};
     var Tawk_LoadStart = new Date();
     
-    // Personnalisation : masquer par défaut, gérer l'ouverture via bouton
     Tawk_API.onLoad = function() {
-      Tawk_API.hideWidget(); // Masque le widget à l'initialisation
+      Tawk_API.hideWidget();
     };
   </script>
 
-  <!-- Chargement du widget Tawk.to -->
   <script is:inline>
     (function() {
       var s1 = document.createElement('script');
@@ -914,66 +608,246 @@ import SectionGaranties from '../components/section-garanties.astro';
 
   <Footer />
 
-  <!-- SCRIPT ET STYLES POUR L'ANIMATION D'INVITATION -->
-<script>
-  // Utilisez DOMContentLoaded plutôt que load pour déclencher plus tôt
-  document.addEventListener('DOMContentLoaded', () => {
-    const sectionInvite = document.getElementById('section-suivante');
-    
-    // VÉRIFICATION ESSENTIELLE : ne continuez que si l'élément existe
-    if (!sectionInvite) {
-      console.warn('Élément #section-suivante non trouvé');
-      return; // Arrête l'exécution si l'élément n'existe pas
-    }
-    
-    // Démarrer l'animation après 3 secondes
-    setTimeout(() => {
-      sectionInvite.classList.add('animate-invite');
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sectionInvite = document.getElementById('section-suivante');
+      if (!sectionInvite) return;
       
-      // Arrêter l'animation après 3 cycles
       setTimeout(() => {
-        sectionInvite.classList.remove('animate-invite');
-      }, 9000); // 3 cycles * 3s = 9s
-    }, 3000); // Délai initial de 3s
-  });
-</script>
+        sectionInvite.classList.add('animate-invite');
+        setTimeout(() => {
+          sectionInvite.classList.remove('animate-invite');
+        }, 9000);
+      }, 3000);
+    });
+  </script>
 
   <style>
-    /* Animation subtile de remontée/descente */
-    @keyframes invite-scroll {
+    @keyframes invite-scroll-jump {
       0%, 100% { 
         transform: translateY(0); 
-        opacity: 1;
       }
-      25% { 
-        transform: translateY(-15px); /* Remonte de 15px */
-        opacity: 0.95;
+      20% { 
+        transform: translateY(-45px);
+        box-shadow: 0 15px 40px rgba(220, 38, 38, 0.4);
       }
-      50% { 
-        transform: translateY(0); /* Retour neutre */
-        opacity: 1;
+      40% { 
+        transform: translateY(0); 
       }
-      75% { 
-        transform: translateY(-8px); /* Petit rebond */
-        opacity: 0.98;
+      60% { 
+        transform: translateY(-35px);
+        box-shadow: 0 12px 35px rgba(220, 38, 38, 0.3);
+      }
+      80% { 
+        transform: translateY(0); 
       }
     }
 
-    /* Classe appliquée après délai */
     .section-invite.animate-invite {
-      animation: invite-scroll 3s ease-in-out;
-      animation-iteration-count: 3; /* Se répète 3 fois */
+      animation: invite-scroll-jump 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      animation-iteration-count: 2;
       position: relative;
-      z-index: 9999; /* Assure qu'elle soit au-dessus si besoin */
+      z-index: 9999;
+      background: linear-gradient(to bottom, 
+        rgba(30, 58, 138, 0.9),
+        rgba(30, 58, 138, 1) 20%,
+        rgba(30, 58, 138, 1) 80%,
+        rgba(30, 58, 138, 0.9)
+      );
     }
 
-    /* Désactiver l'animation pour les utilisateurs préférant les réductions de mouvements */
+    a[href="/quiz"] {
+      animation: pulseQuiz 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulseQuiz {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
+      }
+      50% {
+        box-shadow: 0 0 0 15px rgba(37, 99, 235, 0);
+      }
+    }
+    
+    .quiz-tooltip {
+      position: absolute;
+      right: 110%;
+      top: 50%;
+      transform: translateY(-50%);
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+      color: white;
+      padding: 0.75rem 1rem;
+      border-radius: 0.75rem;
+      font-size: 0.875rem;
+      line-height: 1.4;
+      white-space: normal;
+      width: 240px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      pointer-events: none;
+      z-index: 10000;
+    }
+    
+    .quiz-tooltip::after {
+      content: '';
+      position: absolute;
+      right: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 0 8px 8px;
+      border-color: transparent transparent transparent #1e40af;
+    }
+    
+    a[href="/quiz"]:hover .quiz-tooltip {
+      opacity: 1;
+      visibility: visible;
+      right: 115%;
+    }
+
+    button[onclick*="Tawk_API"] {
+      animation: pulseChat 3s ease-in-out infinite;
+    }
+    
+    @keyframes pulseChat {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      }
+      50% {
+        box-shadow: 0 0 0 15px rgba(16, 185, 129, 0);
+      }
+    }
+    
+    .chat-tooltip {
+      position: absolute;
+      right: 110%;
+      top: 50%;
+      transform: translateY(-50%);
+      background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+      color: white;
+      padding: 0.75rem 1rem;
+      border-radius: 0.75rem;
+      font-size: 0.875rem;
+      line-height: 1.4;
+      white-space: normal;
+      width: 260px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      pointer-events: none;
+      z-index: 10000;
+    }
+    
+    .chat-tooltip::after {
+      content: '';
+      position: absolute;
+      right: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 0 8px 8px;
+      border-color: transparent transparent transparent #065f46;
+    }
+    
+    button[onclick*="Tawk_API"]:hover .chat-tooltip {
+      opacity: 1;
+      visibility: visible;
+      right: 115%;
+    }
+    
+    @media (max-width: 768px) {
+      a[href="/quiz"] {
+        bottom: 7.5rem !important;
+        right: 1rem !important;
+        padding: 0.75rem 1rem !important;
+        font-size: 0.875rem !important;
+      }
+      
+      a[href="/quiz"] svg {
+        width: 1.25rem !important;
+        height: 1.25rem !important;
+      }
+      
+      a[href="/quiz"] > div:not(.quiz-tooltip) {
+        display: none !important;
+      }
+      
+      .quiz-tooltip {
+        right: auto;
+        left: 50%;
+        top: auto;
+        bottom: 110%;
+        transform: translateX(-50%);
+        width: 200px;
+      }
+      
+      .quiz-tooltip::after {
+        right: auto;
+        left: 50%;
+        top: 100%;
+        bottom: auto;
+        transform: translateX(-50%);
+        border-width: 8px 8px 0 8px;
+        border-color: #1e40af transparent transparent transparent;
+      }
+      
+      a[href="/quiz"]:hover .quiz-tooltip {
+        right: auto;
+        bottom: 115%;
+      }
+
+      button[onclick*="Tawk_API"] {
+        bottom: 1rem !important;
+        right: 1rem !important;
+        padding: 0.75rem 1rem !important;
+        font-size: 0.875rem !important;
+      }
+      
+      button[onclick*="Tawk_API"] svg {
+        width: 1.25rem !important;
+        height: 1.25rem !important;
+      }
+      
+      button[onclick*="Tawk_API"] > div:not(.chat-tooltip) {
+        display: none !important;
+      }
+      
+      .chat-tooltip {
+        right: auto;
+        left: 50%;
+        top: auto;
+        bottom: 110%;
+        transform: translateX(-50%);
+        width: 220px;
+      }
+      
+      .chat-tooltip::after {
+        right: auto;
+        left: 50%;
+        top: 100%;
+        bottom: auto;
+        transform: translateX(-50%);
+        border-width: 8px 8px 0 8px;
+        border-color: #065f46 transparent transparent transparent;
+      }
+      
+      button[onclick*="Tawk_API"]:hover .chat-tooltip {
+        right: auto;
+        bottom: 115%;
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .section-invite.animate-invite {
         animation: none;
       }
     }
   </style>
-
 </Layout>
-
