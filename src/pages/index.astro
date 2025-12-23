@@ -93,6 +93,8 @@ import SectionGaranties from '../components/section-garanties.astro';
   <section id="section-suivante" class="section-navy text-white py-20 md:py-32 section-invite">
     <div class="container mx-auto px-4">
       <div class="max-w-6xl mx-auto">
+      <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           <!-- Contenu -->
@@ -208,6 +210,7 @@ import SectionGaranties from '../components/section-garanties.astro';
       </div>
     </div>
   </section>
+  </section> <!-- ← Fermeture de la section "section-suivante" -->
 
   <style>
     /* Animation "SURSATT" - Très visible */
@@ -354,11 +357,11 @@ import SectionGaranties from '../components/section-garanties.astro';
     </div>
   </section>
 
-  <!-- ============================================
-       SECTION COMPRENDRE (COMPOSANT INTÉGRÉ)
-  ============================================ -->
+
   <SectionComprendre />
 
+
+ 813562fce2ceaeed7581dea032811828e1bb71b5
   <!-- Pourquoi nous choisir -->
   <section class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
@@ -617,9 +620,6 @@ import SectionGaranties from '../components/section-garanties.astro';
     </div>
   </section>
 
-  <!-- ============================================
-       SECTION PROCESSUS (COMPOSANT INTÉGRÉ)
-  ============================================ -->
   <SectionProcessus />
 
   <!-- ============================================
@@ -628,6 +628,14 @@ import SectionGaranties from '../components/section-garanties.astro';
   <SectionGaranties />
 
   <!-- Bouton flottant Quiz avec tooltip -->
+=======
+ <!-- ========================================
+   BOUTON FLOTTANT QUIZ AVEC TOOLTIP
+   À remplacer dans index.astro, qui-sommes-nous.astro, formations.astro
+   ======================================== -->
+
+<!-- Bouton flottant Quiz avec tooltip -->
+>>>>>>> 813562fce2ceaeed7581dea032811828e1bb71b5
 <div class="quiz-button-wrapper">
   <a 
     href="/quiz"
@@ -654,6 +662,7 @@ import SectionGaranties from '../components/section-garanties.astro';
   /* Animation pulse pour attirer l'attention */
   a[href="/quiz"] {
     animation: pulseQuiz 2s ease-in-out infinite;
+
   }
   
   @keyframes pulseQuiz {
@@ -965,4 +974,6 @@ import SectionGaranties from '../components/section-garanties.astro';
       }
     }
   </style>
+
 </Layout>
+

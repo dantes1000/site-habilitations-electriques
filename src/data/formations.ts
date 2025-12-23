@@ -10,16 +10,17 @@ import {
 } from './formations-part5';
 import { formationsPart6 } from './formations-part6';
 
-// Agrégation de toutes les formations électriques
+// Agrégation de toutes les formations électriques (14 initiales + 6 recyclages = 20 total)
 export const allFormationsElec: Formation[] = [
   ...formationsElectriques,
   ...formationsInterventionsBT,
   ...formationsElectricienBT,
-  formationBPEnrichi,      // BP enrichi
-  formationBFHF,           // Travaux sous tension HTA
-  formationBEHE,           // Mesure/Essai HTA
+  formationBPEnrichi,
+  formationBFHF,
+  formationBEHE,
   formationHEManoeuvre,
-  ...formationsPart6];
+  ...formationsPart6
+];
 
 // Helper functions
 export function getFormationBySlug(slug: string): Formation | undefined {
